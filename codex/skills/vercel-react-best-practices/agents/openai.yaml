@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vercel React Best Practices"
+  short_description: "Help with Vercel React Best Practices workflows"
+  default_prompt: "Use $vercel-react-best-practices to help with vercel react best practices tasks."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vercel React Native Skills"
+  short_description: "Help with Vercel React Native Skills workflows"
+  default_prompt: "Use $vercel-react-native-skills to help with vercel react native skills tasks."

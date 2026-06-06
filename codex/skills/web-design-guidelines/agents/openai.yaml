@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Design Guidelines"
+  short_description: "Help with Web Design Guidelines workflows"
+  default_prompt: "Use $web-design-guidelines to help with web design guidelines tasks."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vercel Cli With Tokens"
+  short_description: "Help with Vercel Cli With Tokens workflows"
+  default_prompt: "Use $vercel-cli-with-tokens to help with vercel cli with tokens tasks."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy To Vercel"
+  short_description: "Help with Deploy To Vercel workflows"
+  default_prompt: "Use $deploy-to-vercel to help with deploy to vercel tasks."

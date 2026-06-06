@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vercel React View Transitions"
+  short_description: "Help with Vercel React View Transitions workflows"
+  default_prompt: "Use $vercel-react-view-transitions to help with vercel react view transitions tasks."

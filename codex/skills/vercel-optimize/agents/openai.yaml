@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vercel Optimize"
+  short_description: "Help with Vercel Optimize workflows"
+  default_prompt: "Use $vercel-optimize to help with vercel optimize tasks."

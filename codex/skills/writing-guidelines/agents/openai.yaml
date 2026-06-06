@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Guidelines"
+  short_description: "Help with Writing Guidelines workflows"
+  default_prompt: "Use $writing-guidelines to help with writing guidelines tasks."
