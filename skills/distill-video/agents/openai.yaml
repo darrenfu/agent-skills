@@ -1,0 +1,4 @@
+interface:
+  display_name: "Distill Video"
+  short_description: "Extract videos and public XHS posts reliably"
+  default_prompt: "Use $distill-video to extract this video or public Xiaohongshu post, capture audio and visual evidence as appropriate, and distill it into structured takeaways."
