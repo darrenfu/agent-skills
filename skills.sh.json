@@ -3,6 +3,13 @@
   "notGrouped": "bottom",
   "groupings": [
     {
+      "title": "Media",
+      "description": "Skills for extracting and distilling video, audio, subtitles, frames, and public social posts.",
+      "skills": [
+        "distill-video"
+      ]
+    },
+    {
       "title": "React",
       "description": "Skills for building production-quality React and React Native interfaces with Vercel engineering patterns.",
       "skills": [

@@ -8,6 +8,25 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 
 ## Available Skills
 
+### distill-video
+
+Extracts and distills video or public Xiaohongshu posts through a resilient, multimodal workflow. It reconciles frame/OCR evidence, source subtitles, and audio transcription before producing a separately labeled reorganized and denoised artifact.
+
+**Use when:**
+
+- Extracting YouTube or direct video pages
+- Reading Xiaohongshu video or public image/text share links
+- Accessing an entitled Stockbee video through visible Chrome login/autofill
+- Comparing frame text, subtitles, and spoken audio by timestamp
+- Turning raw media into structured takeaways, frameworks, or reusable prompts
+
+**Evidence preserved:**
+
+- Original video, raw audio, and optional denoised audio
+- Raw timestamped ASR and source subtitle tracks
+- Sampled frames, per-frame OCR, and slide/contact-sheet artifacts
+- Reconciled transcript, caveats, and timestamped claims
+
 ### vercel-optimize
 
 Audits a Vercel project for cost, performance, reliability, caching, function usage, and billing opportunities. It collects Vercel metrics first, then investigates only the routes and files those metrics point to.
