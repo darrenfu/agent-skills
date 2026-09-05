@@ -1,0 +1,4 @@
+interface:
+  display_name: "Insurgent Campaign"
+  short_description: "Help with Insurgent Campaign workflows"
+  default_prompt: "Use $insurgent-campaign to help with insurgent campaign tasks."

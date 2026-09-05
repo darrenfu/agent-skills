@@ -1,0 +1,4 @@
+interface:
+  display_name: "Negentropy Lens"
+  short_description: "Help with Negentropy Lens workflows"
+  default_prompt: "Use $negentropy-lens to help with negentropy lens tasks."

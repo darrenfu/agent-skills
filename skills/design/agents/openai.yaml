@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design"
+  short_description: "Help with Design workflows"
+  default_prompt: "Use $design to help with design tasks."
+
+policy:
+  allow_implicit_invocation: false

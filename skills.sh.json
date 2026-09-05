@@ -3,36 +3,95 @@
   "notGrouped": "bottom",
   "groupings": [
     {
-      "title": "Media",
-      "description": "Skills for extracting and distilling video, audio, subtitles, frames, and public social posts.",
+      "title": "Finance and daily workflows",
+      "description": "财务与生活",
       "skills": [
-        "distill-video"
+        "churn-fu",
+        "costco-vgc-wallet",
+        "nasdaq-regime-dca",
+        "stock-risk-first-trading",
+        "paze-restaurant-availability",
+        "school-calendar-source-finder"
       ]
     },
     {
-      "title": "React",
-      "description": "Skills for building production-quality React and React Native interfaces with Vercel engineering patterns.",
+      "title": "Development and operations",
+      "description": "开发、交付与运维",
       "skills": [
-        "vercel-react-best-practices",
-        "vercel-composition-patterns",
-        "vercel-react-view-transitions",
-        "vercel-react-native-skills"
-      ]
-    },
-    {
-      "title": "Vercel",
-      "description": "Skills for deploying, managing, and optimizing applications on Vercel.",
-      "skills": [
+        "cua-driver",
+        "ios-hybrid-delivery",
+        "macos-disk-cleanup",
+        "stateful-change-delivery",
+        "vanity-engineering-review",
         "deploy-to-vercel",
         "vercel-cli-with-tokens",
         "vercel-optimize"
       ]
     },
     {
-      "title": "Design",
-      "description": "Skills for reviewing and improving web interfaces, accessibility, and UX quality.",
+      "title": "Frontend and design",
+      "description": "前端与设计",
       "skills": [
-        "web-design-guidelines"
+        "banner-design",
+        "brand",
+        "design",
+        "design-audit",
+        "design-system",
+        "ui-styling",
+        "ui-typography",
+        "relationship-design",
+        "renaissance-architecture",
+        "web-design-guidelines",
+        "vercel-composition-patterns",
+        "vercel-react-best-practices",
+        "vercel-react-native-skills",
+        "vercel-react-view-transitions"
+      ]
+    },
+    {
+      "title": "Research and knowledge",
+      "description": "研究与知识管理",
+      "skills": [
+        "defuddle",
+        "notebooklm-studio",
+        "obsidian-bases",
+        "obsidian-cli",
+        "obsidian-markdown",
+        "paper-distiller",
+        "json-canvas"
+      ]
+    },
+    {
+      "title": "Media and visualization",
+      "description": "视频与可视化",
+      "skills": [
+        "distill-video",
+        "manim-video",
+        "video-frames",
+        "video-use",
+        "visualize"
+      ]
+    },
+    {
+      "title": "Xiaohongshu",
+      "description": "小红书",
+      "skills": [
+        "xiaohongshu-skills",
+        "xhs-auth",
+        "xhs-explore",
+        "xhs-interact",
+        "xhs-publish",
+        "xhs-content-ops"
+      ]
+    },
+    {
+      "title": "Strategy and writing",
+      "description": "思考、营销与写作",
+      "skills": [
+        "insurgent-campaign",
+        "negentropy-lens",
+        "stop-slop",
+        "writing-guidelines"
       ]
     }
   ]

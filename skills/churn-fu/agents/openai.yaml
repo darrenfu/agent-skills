@@ -1,0 +1,7 @@
+interface:
+  display_name: "Churn Fu"
+  short_description: "Bilingual card, benefit, VGC and PSE operations"
+  brand_color: "#2563EB"
+  default_prompt: "Use $churn-fu to manage my card benefits or run an authorized VGC-to-PSE payment workflow."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Paze Restaurant Availability"
+  short_description: "实时查找附近或回家顺路可用的 Paze 餐馆"

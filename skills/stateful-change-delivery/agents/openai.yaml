@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stateful Change Delivery"
+  short_description: "Safely ship changes across code, data, policy, and runtime state"
+  default_prompt: "Use $stateful-change-delivery to deliver this stateful software change with recovery evidence, an auditable change record, dependency-ordered rollout, rollback, and target-environment verification."

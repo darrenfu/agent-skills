@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vanity Engineering Review"
+  short_description: "Help with Vanity Engineering Review workflows"
+  default_prompt: "Use $vanity-engineering-review to help with vanity engineering review tasks."
