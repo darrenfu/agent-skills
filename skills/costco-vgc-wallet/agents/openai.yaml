@@ -1,0 +1,4 @@
+interface:
+  display_name: "Costco VGC Wallet"
+  short_description: "Staples VGC to Costco Wallet workflow"
+  default_prompt: "Use $costco-vgc-wallet to run a user-confirmed Staples VGC to Costco Wallet gift card workflow."

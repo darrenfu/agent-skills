@@ -1,0 +1,4 @@
+interface:
+  display_name: "JSON Canvas"
+  short_description: "Create and edit JSON Canvas .canvas files"
+  default_prompt: "Use $json-canvas for Obsidian Canvas or JSON Canvas file work."

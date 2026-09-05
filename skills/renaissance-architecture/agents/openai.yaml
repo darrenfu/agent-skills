@@ -1,0 +1,4 @@
+interface:
+  display_name: "Renaissance Architecture"
+  short_description: "Help with Renaissance Architecture workflows"
+  default_prompt: "Use $renaissance-architecture to help with renaissance architecture tasks."

@@ -1,0 +1,7 @@
+{
+  "https://cdn.jsdelivr.net/npm/chart.js@4.4.4": "sha384-NrKB+u6Ts6AtkIhwPixiKTzgSKNblyhlk0Sohlgar9UHUBzai/sgnNNWWd291xqt",
+  "https://cdn.jsdelivr.net/npm/mermaid@10.9.5/dist/mermaid.min.js": "sha384-enVdc7lTHDGtpROV85t9+VqPC2EyyB0hsRD0MrvQnHUsHmTHIz2D8SPP4EnBkstH",
+  "https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js": "sha384-su5kReKyYlIFrI62mbQRKXHzFobMa7BHp1cK6julLPbnYcCW9NIZKJiTODjLPeDh",
+  "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js": "sha384-ZZ1pncU3bQe8y31yfZdMFdSpttDoPmOZg2wguVK9almUodir1PghgT0eY7Mrty8H",
+  "https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js": "sha384-lFfU+kVPBF9H3h8c1O+KQNuTRX7dilL8RZiy/kxQiYulHvYCHv4z+eba37GD2qTC"
+}

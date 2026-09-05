@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Audit"
+  short_description: "Help with Design Audit workflows"
+  default_prompt: "Use $design-audit to help with design audit tasks."

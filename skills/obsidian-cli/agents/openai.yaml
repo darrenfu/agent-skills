@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian CLI"
+  short_description: "Interact with Obsidian vaults through the Obsidian CLI"
+  default_prompt: "Use $obsidian-cli for Obsidian vault operations or plugin/theme development through the CLI."

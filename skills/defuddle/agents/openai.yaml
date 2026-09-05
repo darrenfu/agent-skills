@@ -1,0 +1,4 @@
+interface:
+  display_name: "Defuddle"
+  short_description: "Extract clean Markdown content from web pages with Defuddle CLI"
+  default_prompt: "Use $defuddle when a URL should be converted into clean Markdown."

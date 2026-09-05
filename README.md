@@ -4,7 +4,11 @@ A collection of skills for AI coding agents. Skills are packaged instructions an
 
 Skills follow the [Agent Skills](https://agentskills.io/) format.
 
-[![skills.sh](https://skills.sh/b/vercel-labs/agent-skills)](https://skills.sh/vercel-labs/agent-skills)
+## Installed custom skill export
+
+This personal fork contains **50 installed custom skills** across 44 packages, audited on 2026-09-05. See the [complete catalog and restore notes](docs/installed-skills/README.md) and [file manifest](docs/installed-skills/manifest.json). The catalog distinguishes 47 session-visible skills from 3 installed definitions that were not exposed in that session. Personal defaults are replaced with configuration placeholders; original skill licenses remain with their packages.
+
+[![skills.sh](https://skills.sh/b/darrenfu/agent-skills)](https://skills.sh/darrenfu/agent-skills)
 
 ## Available Skills
 
@@ -213,7 +217,7 @@ Claim URL:   https://vercel.com/claim-deployment?code=...
 ## Installation
 
 ```bash
-npx skills add vercel-labs/agent-skills
+npx skills add darrenfu/agent-skills
 ```
 
 ## Usage
@@ -244,4 +248,4 @@ Each skill contains:
 
 ## License
 
-MIT
+The original Vercel collection is MIT licensed. Imported packages and bundled assets retain their own license files and notices, including MIT, Apache-2.0, and font licenses. Consult the individual package before reuse.

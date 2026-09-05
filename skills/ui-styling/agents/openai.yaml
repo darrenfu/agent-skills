@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ui Styling"
+  short_description: "Help with Ui Styling workflows"
+  default_prompt: "Use $ui-styling to help with ui styling tasks."

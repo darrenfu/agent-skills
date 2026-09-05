@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nasdaq Regime DCA"
+  short_description: "CAPE DD VIX monthly Nasdaq DCA rules"
+  default_prompt: "Use $nasdaq-regime-dca to turn current CAPE, drawdown, VIX, cash, and QQQ/TQQQ holdings into a monthly IBKR-ready review memo."

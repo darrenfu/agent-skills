@@ -1,0 +1,7 @@
+interface:
+  display_name: "Banner Design"
+  short_description: "Help with Banner Design workflows"
+  default_prompt: "Use $banner-design to help with banner design tasks."
+
+policy:
+  allow_implicit_invocation: false

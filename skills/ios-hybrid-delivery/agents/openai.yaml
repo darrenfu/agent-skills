@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Hybrid Delivery"
+  short_description: "Local signing plus Xcode Cloud mobile delivery"
+  default_prompt: "Use $ios-hybrid-delivery to configure and verify a no-timeout local signing lane plus Xcode Cloud and TestFlight remote delivery."

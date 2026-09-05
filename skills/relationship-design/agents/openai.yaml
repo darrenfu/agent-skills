@@ -1,0 +1,4 @@
+interface:
+  display_name: "Relationship Design"
+  short_description: "Help with Relationship Design workflows"
+  default_prompt: "Use $relationship-design to help with relationship design tasks."

@@ -1,3 +1,17 @@
 .DS_Store
 .vercel
 .env*.local
+
+# Local runtime state must not enter skill exports.
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/node_modules/
+**/.codex-writer-lease*
+**/.env
+**/.env.*
+!**/.env.example
+*.pyc
+*.pyo

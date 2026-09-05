@@ -1,0 +1,4 @@
+interface:
+  display_name: "Ui Typography"
+  short_description: "Help with Ui Typography workflows"
+  default_prompt: "Use $ui-typography to help with ui typography tasks."

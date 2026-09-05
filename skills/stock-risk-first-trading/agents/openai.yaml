@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Risk-First Trading"
+  short_description: "Risk-first stock and options trade checks"
+  default_prompt: "Use $stock-risk-first-trading to evaluate this stock or trade idea with risk-first checks before considering upside."
