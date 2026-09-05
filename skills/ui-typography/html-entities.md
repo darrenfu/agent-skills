@@ -7,7 +7,7 @@ existing HTML for incorrect character usage.
 
 ## Quick Substitution Table
 
-When generating HTML/JSX, substitute these characters automatically:
+For typographic prose, consider the following encodings. Preserve exact code, data, quotations, and language-specific characters; do not apply automatic global substitution:
 
 | If you see | Replace with | Entity | Rule |
 |------------|-------------|--------|------|
@@ -22,7 +22,7 @@ When generating HTML/JSX, substitute these characters automatically:
 | (R) | ® | `&reg;` | Real registered symbol |
 | 12 x 34 | 12 × 34 | `&times;` | Real multiplication sign |
 | 56 - 12 (math) | 56 − 12 | `&minus;` | Real minus sign |
-| 6' 10" (curly, in measurements) | 6' 10" (straight) | `&#39;` `&quot;` | Foot/inch must be straight |
+| 6' 10" (curly, in measurements) | 6' 10" (straight) | `&#39;` `&quot;` | Match the chosen measurement convention; do not turn measurement marks into curly quotation marks |
 
 ---
 

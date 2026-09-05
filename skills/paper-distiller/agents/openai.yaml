@@ -1,4 +1,4 @@
 interface:
   display_name: "Paper Distiller"
-  short_description: "Distill research papers into teachable HTML"
-  default_prompt: "Use $paper-distiller to distill this paper into fast-read and deep-read views, then render a teachable HTML page."
+  short_description: "Explain research papers at the requested depth"
+  default_prompt: "Use $paper-distiller to explain this paper at the requested depth, in the requested language and format."

@@ -5,11 +5,11 @@
   "counts": {
     "unique_skills": 50,
     "packages": 44,
-    "installed_entrypoints": 62,
+    "installed_entrypoints": 50,
     "exposed_in_current_session": 47,
-    "exported_files": 742
+    "exported_files": 743
   },
-  "selection": "Prefer full .codex packages; merge identical .agents subsets and retain the differing legacy XHS entrypoint separately.",
+  "selection": "One complete canonical package per name. Historical source_paths retain export provenance; canonical_installed_path records the maintenance target. Duplicate .agents directories are quarantined privately; CuaDriver uses a managed copy.",
   "excluded_names": [
     ".DS_Store",
     ".codex-writer-lease.md",
@@ -48,63 +48,75 @@
     {
       "name": "deploy-to-vercel",
       "source": "~/.agents/skills/deploy-to-vercel",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "notebooklm-studio",
       "source": "~/.agents/skills/notebooklm-studio",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-cli-with-tokens",
       "source": "~/.agents/skills/vercel-cli-with-tokens",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-composition-patterns",
       "source": "~/.agents/skills/vercel-composition-patterns",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-optimize",
       "source": "~/.agents/skills/vercel-optimize",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-react-best-practices",
       "source": "~/.agents/skills/vercel-react-best-practices",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-react-native-skills",
       "source": "~/.agents/skills/vercel-react-native-skills",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "vercel-react-view-transitions",
       "source": "~/.agents/skills/vercel-react-view-transitions",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "video-use",
       "source": "~/.agents/skills/video-use",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "web-design-guidelines",
       "source": "~/.agents/skills/web-design-guidelines",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "writing-guidelines",
       "source": "~/.agents/skills/writing-guidelines",
-      "status": "identical or subset; deduplicated"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "export_status": "identical or subset; deduplicated"
     },
     {
       "name": "xiaohongshu-skills",
       "source": "~/.agents/skills/xiaohongshu-skills/SKILL.md",
-      "status": "legacy entrypoint preserved",
-      "path": "docs/installed-skills/legacy/xiaohongshu-skills.agents.md"
+      "status": "Removed from discovery into private local quarantine; canonical complete package retained.",
+      "path": "docs/installed-skills/legacy/xiaohongshu-skills.agents.md",
+      "export_status": "legacy entrypoint preserved"
     }
   ],
   "skills": [
@@ -116,7 +128,8 @@
       "source_paths": [
         "~/.codex/skills/banner-design/SKILL.md"
       ],
-      "exposed_in_current_session": false
+      "exposed_in_current_session": false,
+      "canonical_installed_path": "~/.codex/skills/banner-design/SKILL.md"
     },
     {
       "name": "brand",
@@ -126,7 +139,8 @@
       "source_paths": [
         "~/.codex/skills/brand/SKILL.md"
       ],
-      "exposed_in_current_session": false
+      "exposed_in_current_session": false,
+      "canonical_installed_path": "~/.codex/skills/brand/SKILL.md"
     },
     {
       "name": "churn-fu",
@@ -136,7 +150,8 @@
       "source_paths": [
         "~/.codex/skills/churn-fu/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/churn-fu/SKILL.md"
     },
     {
       "name": "costco-vgc-wallet",
@@ -146,7 +161,8 @@
       "source_paths": [
         "~/.codex/skills/costco-vgc-wallet/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/costco-vgc-wallet/SKILL.md"
     },
     {
       "name": "cua-driver",
@@ -156,7 +172,8 @@
       "source_paths": [
         "~/.agents/skills/cua-driver/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.agents/skills/cua-driver/SKILL.md"
     },
     {
       "name": "defuddle",
@@ -166,7 +183,8 @@
       "source_paths": [
         "~/.codex/skills/defuddle/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/defuddle/SKILL.md"
     },
     {
       "name": "deploy-to-vercel",
@@ -177,7 +195,8 @@
         "~/.codex/skills/deploy-to-vercel/SKILL.md",
         "~/.agents/skills/deploy-to-vercel/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/deploy-to-vercel/SKILL.md"
     },
     {
       "name": "design",
@@ -187,27 +206,30 @@
       "source_paths": [
         "~/.codex/skills/design/SKILL.md"
       ],
-      "exposed_in_current_session": false
+      "exposed_in_current_session": false,
+      "canonical_installed_path": "~/.codex/skills/design/SKILL.md"
     },
     {
       "name": "design-audit",
-      "description": "Premium UI/UX design audit and refinement skill. Conducts systematic visual audits of existing apps and produces phased, implementation-ready design plans. Use this skill whenever the user asks to audit a UI, improve an app's visual design, make an interface feel more polished or premium, review design consistency, fix visual hierarchy, or refine spacing/typography/color. Also trigger when the user says \"design review\", \"make it look better\", \"UI polish\", \"visual refinement\", \"design pass\", \"audit the design\", or references making an app feel more professional. This skill is purely visual — it does not touch functionality, logic, or features. It elevates what exists.",
+      "description": "Audit or refine an existing UI when the user requests a design review, visual polish, hierarchy, spacing, color, typography, consistency, or accessibility improvements. Scope inspection and implementation to the requested component, flow, or product.",
       "path": "skills/design-audit/SKILL.md",
       "package": "design-audit",
       "source_paths": [
         "~/.codex/skills/design-audit/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/design-audit/SKILL.md"
     },
     {
       "name": "design-system",
-      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, and brand token integration. Use when creating or maintaining a design system, defining reusable component styles, or applying existing brand tokens.",
       "path": "skills/design-system/SKILL.md",
       "package": "design-system",
       "source_paths": [
         "~/.codex/skills/design-system/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/design-system/SKILL.md"
     },
     {
       "name": "distill-video",
@@ -217,7 +239,8 @@
       "source_paths": [
         "~/.codex/skills/distill-video/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/distill-video/SKILL.md"
     },
     {
       "name": "insurgent-campaign",
@@ -227,7 +250,8 @@
       "source_paths": [
         "~/.codex/skills/insurgent-campaign/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/insurgent-campaign/SKILL.md"
     },
     {
       "name": "ios-hybrid-delivery",
@@ -237,7 +261,8 @@
       "source_paths": [
         "~/.codex/skills/ios-hybrid-delivery/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/ios-hybrid-delivery/SKILL.md"
     },
     {
       "name": "json-canvas",
@@ -247,7 +272,8 @@
       "source_paths": [
         "~/.codex/skills/json-canvas/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/json-canvas/SKILL.md"
     },
     {
       "name": "macos-disk-cleanup",
@@ -257,7 +283,8 @@
       "source_paths": [
         "~/.codex/skills/macos-disk-cleanup/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/macos-disk-cleanup/SKILL.md"
     },
     {
       "name": "manim-video",
@@ -267,7 +294,8 @@
       "source_paths": [
         "~/.codex/skills/video-use/skills/manim-video/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/video-use/skills/manim-video/SKILL.md"
     },
     {
       "name": "nasdaq-regime-dca",
@@ -277,17 +305,19 @@
       "source_paths": [
         "~/.codex/skills/nasdaq-regime-dca/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/nasdaq-regime-dca/SKILL.md"
     },
     {
       "name": "negentropy-lens",
-      "description": "A decision-support framework that evaluates systems, architectures, and strategies through the entropy (decay) vs negentropy (growth) lens, while surfacing tacit knowledge gaps. Use this skill whenever the user is making architecture decisions, evaluating system designs, reviewing technical approaches, choosing between options, auditing existing systems, or planning strategies. Also trigger when the user explicitly asks to \"apply the negentropy lens\", mentions \"entropy\", \"negentropy\", \"tacit knowledge\", \"knowledge engine\", or \"flip the switch\". Nudge activation when you detect the user is at a decision point — even if they haven't asked for this lens — by briefly noting the entropic/negentropic dimension before proceeding.",
+      "description": "Apply an entropy/negentropy or tacit-knowledge lens when the user requests that framework or specifically investigates organizational decay, compounding capability, or unwritten operational knowledge. Do not activate for every architecture or strategy decision.",
       "path": "skills/negentropy-lens/SKILL.md",
       "package": "negentropy-lens",
       "source_paths": [
         "~/.codex/skills/negentropy-lens/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/negentropy-lens/SKILL.md"
     },
     {
       "name": "notebooklm-studio",
@@ -298,7 +328,8 @@
         "~/.codex/skills/notebooklm-studio-Skill/SKILL.md",
         "~/.agents/skills/notebooklm-studio/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/notebooklm-studio-Skill/SKILL.md"
     },
     {
       "name": "obsidian-bases",
@@ -308,7 +339,8 @@
       "source_paths": [
         "~/.codex/skills/obsidian-bases/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/obsidian-bases/SKILL.md"
     },
     {
       "name": "obsidian-cli",
@@ -318,7 +350,8 @@
       "source_paths": [
         "~/.codex/skills/obsidian-cli/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/obsidian-cli/SKILL.md"
     },
     {
       "name": "obsidian-markdown",
@@ -328,17 +361,19 @@
       "source_paths": [
         "~/.codex/skills/obsidian-markdown/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/obsidian-markdown/SKILL.md"
     },
     {
       "name": "paper-distiller",
-      "description": "Distill research papers into understandable, teachable artifacts and a final self-contained HTML visualization. Use when the user asks to explain, summarize, teach, 精读, 速读, distill, 蒸馏, or turn a paper into a public-friendly explanation; supports paper PDFs, arXiv/alphaXiv/DOI/URL links, screenshots of a paper title/page, pasted titles, abstracts, or mixed inputs.",
+      "description": "Explain or distill a research paper from a PDF, arXiv/DOI link, title, abstract, or screenshot. Use for paper-specific summaries, method explanations, deep reads, and teaching artifacts; match the requested depth and format.",
       "path": "skills/paper-distiller/SKILL.md",
       "package": "paper-distiller",
       "source_paths": [
         "~/.codex/skills/paper-distiller/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/paper-distiller/SKILL.md"
     },
     {
       "name": "paze-restaurant-availability",
@@ -348,7 +383,8 @@
       "source_paths": [
         "~/.codex/skills/paze-restaurant-availability/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/paze-restaurant-availability/SKILL.md"
     },
     {
       "name": "relationship-design",
@@ -358,17 +394,19 @@
       "source_paths": [
         "~/.codex/skills/relationship-design/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/relationship-design/SKILL.md"
     },
     {
       "name": "renaissance-architecture",
-      "description": "Software architecture and UI/UX principles for building genuinely new solutions, not derivative work. Use when designing features, architecting software, brainstorming apps, reviewing designs, or during strategy discussions. Focuses on first-principles thinking, simplicity where it matters, and creating rather than commenting.",
+      "description": "Explore first-principles product ideas, new interaction models, or a substantial architecture rethink when the user requests those forms of design exploration. Compare novel and established approaches against user outcomes and constraints.",
       "path": "skills/renaissance-architecture/SKILL.md",
       "package": "renaissance-architecture",
       "source_paths": [
         "~/.codex/skills/renaissance-architecture/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/renaissance-architecture/SKILL.md"
     },
     {
       "name": "school-calendar-source-finder",
@@ -378,7 +416,8 @@
       "source_paths": [
         "~/.codex/skills/school-calendar-source-finder/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/school-calendar-source-finder/SKILL.md"
     },
     {
       "name": "stateful-change-delivery",
@@ -388,7 +427,8 @@
       "source_paths": [
         "~/.codex/skills/stateful-change-delivery/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/stateful-change-delivery/SKILL.md"
     },
     {
       "name": "stock-risk-first-trading",
@@ -398,17 +438,19 @@
       "source_paths": [
         "~/.codex/skills/stock-risk-first-trading/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/stock-risk-first-trading/SKILL.md"
     },
     {
       "name": "stop-slop",
-      "description": "Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.",
+      "description": "Edit or review prose for repetitive AI-style phrasing, filler, and unnatural rhythm when the user requests clearer, more natural writing or a slop check. Preserve meaning, voice, and uncertainty.",
       "path": "skills/stop-slop/SKILL.md",
       "package": "stop-slop",
       "source_paths": [
         "~/.codex/skills/stop-slop/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/stop-slop/SKILL.md"
     },
     {
       "name": "ui-styling",
@@ -418,27 +460,30 @@
       "source_paths": [
         "~/.codex/skills/ui-styling/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/ui-styling/SKILL.md"
     },
     {
       "name": "ui-typography",
-      "description": "Professional typography rules for UI design, web applications, software interfaces, and all screen-based text. Enforces timeless typographic correctness that LLMs consistently get wrong: proper quote marks, dashes, spacing, hierarchy, and layout. ENFORCEMENT MODE: When generating ANY HTML, CSS, React, JSX, or UI code containing visible text, auto-apply every rule in this skill silently — do not ask, do not explain, just produce correct typography. AUDIT MODE: When reviewing or improving existing interfaces or legacy code, flag violations and provide fixes. Trigger on: any HTML/CSS/React artifact creation, \"build a landing page\", \"create a component\", \"design a UI\", \"fix the typography\", \"make this look professional\", \"review this layout\", web design, presentation design, dashboard creation, document generation, or any task producing visible text for humans. Even if the user doesn't mention typography, apply these rules whenever generating UI output.",
+      "description": "Review or refine UI typography, readable text hierarchy, spacing, punctuation, and font choices when the task concerns typography or visual design. Apply changes to the affected interface and follow its language, brand, and code conventions.",
       "path": "skills/ui-typography/SKILL.md",
       "package": "ui-typography",
       "source_paths": [
         "~/.codex/skills/ui-typography/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/ui-typography/SKILL.md"
     },
     {
       "name": "vanity-engineering-review",
-      "description": "Reviews codebases, architectures, PRs, and technical plans for vanity engineering — code and systems built for the developer's ego, resume, or intellectual pleasure rather than delivering user or business value. Triggers on: \"review this code\", \"is this over-engineered\", \"code review\", \"architecture review\", \"complexity audit\", \"vanity check\", \"is this necessary\", \"simplify this\", \"tech debt review\", or any request to evaluate whether code or architecture is justified by actual requirements. Also trigger when the user shares a codebase and asks for feedback, when discussing framework/library choices, when reviewing PRs, or when someone is debating whether to refactor or rebuild. Nudge activation when you detect patterns of unnecessary abstraction, premature optimization, or resume-driven technology choices in code the user shares — even if they haven't asked for a vanity review.",
+      "description": "Assess suspected overengineering, unnecessary abstractions, or maintenance complexity when the user requests a complexity audit, vanity check, simplification review, or a requirements-versus-cost evaluation. Ground findings in evidence and tradeoffs.",
       "path": "skills/vanity-engineering-review/SKILL.md",
       "package": "vanity-engineering-review",
       "source_paths": [
         "~/.codex/skills/vanity-engineering-review/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vanity-engineering-review/SKILL.md"
     },
     {
       "name": "vercel-cli-with-tokens",
@@ -449,7 +494,8 @@
         "~/.codex/skills/vercel-cli-with-tokens/SKILL.md",
         "~/.agents/skills/vercel-cli-with-tokens/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-cli-with-tokens/SKILL.md"
     },
     {
       "name": "vercel-composition-patterns",
@@ -460,7 +506,8 @@
         "~/.codex/skills/vercel-composition-patterns/SKILL.md",
         "~/.agents/skills/vercel-composition-patterns/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-composition-patterns/SKILL.md"
     },
     {
       "name": "vercel-optimize",
@@ -471,7 +518,8 @@
         "~/.codex/skills/vercel-optimize/SKILL.md",
         "~/.agents/skills/vercel-optimize/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-optimize/SKILL.md"
     },
     {
       "name": "vercel-react-best-practices",
@@ -482,7 +530,8 @@
         "~/.codex/skills/vercel-react-best-practices/SKILL.md",
         "~/.agents/skills/vercel-react-best-practices/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-react-best-practices/SKILL.md"
     },
     {
       "name": "vercel-react-native-skills",
@@ -493,18 +542,20 @@
         "~/.codex/skills/vercel-react-native-skills/SKILL.md",
         "~/.agents/skills/vercel-react-native-skills/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-react-native-skills/SKILL.md"
     },
     {
       "name": "vercel-react-view-transitions",
-      "description": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`<ViewTransition>` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.",
+      "description": "Guide for implementing smooth, native-feeling animations using React's View Transition API (`ViewTransition` component, `addTransitionType`, and CSS view transition pseudo-elements). Use this skill whenever the user wants to add page transitions, animate route changes, create shared element animations, animate enter/exit of components, animate list reorder, implement directional (forward/back) navigation animations, or integrate view transitions in Next.js. Also use when the user mentions view transitions, `startViewTransition`, `ViewTransition`, transition types, or asks about animating between UI states in React without third-party animation libraries.",
       "path": "skills/react-view-transitions/SKILL.md",
       "package": "vercel-react-view-transitions",
       "source_paths": [
         "~/.codex/skills/vercel-react-view-transitions/SKILL.md",
         "~/.agents/skills/vercel-react-view-transitions/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/vercel-react-view-transitions/SKILL.md"
     },
     {
       "name": "video-frames",
@@ -514,28 +565,31 @@
       "source_paths": [
         "~/.codex/skills/video-frames/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/video-frames/SKILL.md"
     },
     {
       "name": "video-use",
-      "description": "Edit any video by conversation. Transcribe, cut, color grade, generate overlay animations, burn subtitles — for talking heads, montages, tutorials, travel, interviews. No presets, no menus. Ask questions, confirm the plan, execute, iterate, persist. Production-correctness rules are hard; everything else is artistic freedom.",
+      "description": "Edit video files by trimming, selecting takes, grading, adding subtitles, or composing animations and montages. Use when the user requests a video edit; select tools and verification according to the footage and requested result.",
       "path": "skills/video-use/SKILL.md",
       "package": "video-use",
       "source_paths": [
         "~/.codex/skills/video-use/SKILL.md",
         "~/.agents/skills/video-use/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/video-use/SKILL.md"
     },
     {
       "name": "visualize",
-      "description": "Visualize anything as a beautiful, distinctive HTML page. Use for session summaries, code explainers, data reports, onboarding guides, work summaries, meeting prep, presentations, experiment reports, and more. Produces production-grade interfaces with exceptional design quality.",
+      "description": "Create standalone HTML visualizations, interactive explainers, dashboards, or reports when an HTML artifact is requested or materially useful. Use the requested native format for slides, documents, and notebooks instead of replacing it with HTML.",
       "path": "skills/visualize/SKILL.md",
       "package": "visualize",
       "source_paths": [
         "~/.codex/skills/visualize/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/visualize/SKILL.md"
     },
     {
       "name": "web-design-guidelines",
@@ -546,7 +600,8 @@
         "~/.codex/skills/web-design-guidelines/SKILL.md",
         "~/.agents/skills/web-design-guidelines/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/web-design-guidelines/SKILL.md"
     },
     {
       "name": "writing-guidelines",
@@ -557,68 +612,75 @@
         "~/.codex/skills/writing-guidelines/SKILL.md",
         "~/.agents/skills/writing-guidelines/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/writing-guidelines/SKILL.md"
     },
     {
       "name": "xhs-auth",
-      "description": "小红书认证管理技能。检查登录状态、登录（二维码或手机号）、退出登录。\n当用户要求登录小红书、检查登录状态、退出登录时触发。",
+      "description": "小红书认证管理技能。检查登录状态、登录（二维码或手机号）、退出登录。\n当用户要求登录小红书、检查登录状态、退出登录时触发。\n",
       "path": "skills/xiaohongshu-skills/skills/xhs-auth/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/skills/xhs-auth/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/skills/xhs-auth/SKILL.md"
     },
     {
       "name": "xhs-content-ops",
-      "description": "小红书复合内容运营技能。组合搜索、详情、发布、互动等能力完成运营工作流。\n当用户要求竞品分析、热点追踪、内容创作、互动管理等复合任务时触发。",
+      "description": "小红书复合内容运营技能。组合搜索、详情、发布、互动等能力完成运营工作流。\n当用户要求竞品分析、热点追踪、内容创作、互动管理等复合任务时触发。\n",
       "path": "skills/xiaohongshu-skills/skills/xhs-content-ops/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/skills/xhs-content-ops/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/skills/xhs-content-ops/SKILL.md"
     },
     {
       "name": "xhs-explore",
-      "description": "小红书内容发现与分析技能。搜索笔记、浏览首页、查看详情、获取用户资料。\n当用户要求搜索小红书、查看笔记详情、浏览首页、查看用户主页时触发。",
+      "description": "小红书内容发现与分析技能。搜索笔记、浏览首页、查看详情、获取用户资料。\n当用户要求搜索小红书、查看笔记详情、浏览首页、查看用户主页时触发。\n",
       "path": "skills/xiaohongshu-skills/skills/xhs-explore/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/skills/xhs-explore/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/skills/xhs-explore/SKILL.md"
     },
     {
       "name": "xhs-interact",
-      "description": "小红书社交互动技能。发表评论、回复评论、点赞、收藏。\n当用户要求评论、回复、点赞或收藏小红书帖子时触发。",
+      "description": "小红书社交互动技能。发表评论、回复评论、点赞、收藏。\n当用户要求评论、回复、点赞或收藏小红书帖子时触发。\n",
       "path": "skills/xiaohongshu-skills/skills/xhs-interact/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/skills/xhs-interact/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/skills/xhs-interact/SKILL.md"
     },
     {
       "name": "xhs-publish",
-      "description": "小红书内容发布技能。支持图文发布、视频发布、长文发布、定时发布、标签、可见性设置。\n当用户要求发布内容到小红书、上传图文、上传视频、发长文时触发。",
+      "description": "小红书内容发布技能。支持图文发布、视频发布、长文发布、定时发布、标签、可见性设置。\n当用户要求发布内容到小红书、上传图文、上传视频、发长文时触发。\n",
       "path": "skills/xiaohongshu-skills/skills/xhs-publish/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/skills/xhs-publish/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/skills/xhs-publish/SKILL.md"
     },
     {
       "name": "xiaohongshu-skills",
-      "description": "小红书自动化技能集合。支持认证登录、内容发布、搜索发现、社交互动、复合运营。\n当用户要求操作小红书（发布、搜索、评论、登录、分析、点赞、收藏）时触发。",
+      "description": "小红书自动化技能集合。支持认证登录、内容发布、搜索发现、社交互动、复合运营。\n当用户要求操作小红书（发布、搜索、评论、登录、分析、点赞、收藏）时触发。\n",
       "path": "skills/xiaohongshu-skills/SKILL.md",
       "package": "xiaohongshu-skills",
       "source_paths": [
         "~/.codex/skills/xiaohongshu-skills/SKILL.md",
         "~/.agents/skills/xiaohongshu-skills/SKILL.md"
       ],
-      "exposed_in_current_session": true
+      "exposed_in_current_session": true,
+      "canonical_installed_path": "~/.codex/skills/xiaohongshu-skills/SKILL.md"
     }
   ],
   "files": [
@@ -996,8 +1058,8 @@
     },
     {
       "path": "skills/costco-vgc-wallet/SKILL.md",
-      "bytes": 9233,
-      "sha256": "d8fa5ab4d1e00695cebfbe7fc7e579a169993a0c82fe54f9312c7b2d86e3ba94",
+      "bytes": 9581,
+      "sha256": "cd22a234b0adf52570dff6c654edb1d688d70a70ce8cf5f32717af7d7a9c5cc3",
       "executable": false
     },
     {
@@ -1020,8 +1082,8 @@
     },
     {
       "path": "skills/cua-driver/SKILL.md",
-      "bytes": 47065,
-      "sha256": "5c0e46c628d02e6a4596fbad53ff2235820d21754f4f96454a900e90d7f96125",
+      "bytes": 47378,
+      "sha256": "21055fd285b850a7a167b45dd447c9232014f84d6f56edd0e68cd605a1f102ef",
       "executable": false
     },
     {
@@ -1065,192 +1127,6 @@
       "bytes": 8841,
       "sha256": "418da6ff48c582790799d850a88fd83ca00f2ee00502665caf8dbb06d4dab8b9",
       "executable": true
-    },
-    {
-      "path": "skills/design-audit/SKILL.md",
-      "bytes": 6199,
-      "sha256": "d96556cb242d5e8dc8033b091eb23f735f0292131b8794b8cd1aa1a32d336aae",
-      "executable": false
-    },
-    {
-      "path": "skills/design-audit/agents/openai.yaml",
-      "bytes": 169,
-      "sha256": "a45bf28a2adb68670f1e6222da856b536c01f93225c64b4e85960aba1283212f",
-      "executable": false
-    },
-    {
-      "path": "skills/design-audit/audit-template.md",
-      "bytes": 3272,
-      "sha256": "da07b1a581f951a5bed5ac0177206604870791b35d9e1fa893ba4f3156f181da",
-      "executable": false
-    },
-    {
-      "path": "skills/design-audit/design-principles.md",
-      "bytes": 2047,
-      "sha256": "c3affb95cc5cb46c7b580d579da2209fd04b8aaace0b8befcd5ed0cb1b839186",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/SKILL.md",
-      "bytes": 7085,
-      "sha256": "b344a8e956618986ba9b69d67fd9d258ceb2d6e9dcd942dc56c3305195a05cef",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/agents/openai.yaml",
-      "bytes": 173,
-      "sha256": "afea5ca9b79e1fbb5f5a765c2becbfc27ceee0852014d6ad4469d3394a5261de",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-backgrounds.csv",
-      "bytes": 1038,
-      "sha256": "d1bb701b87bef493d72974d6fac1087c8ba4e2df14185fe3e0c36a13fe35f3d1",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-charts.csv",
-      "bytes": 8631,
-      "sha256": "12ef876cd76e67a6553444bfa2ebf1d5d4d6216289d34db052a6e87421135033",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-color-logic.csv",
-      "bytes": 877,
-      "sha256": "ea68c737075f1615b2a7e461e2878c06bfe8f803dcabfbcc2977ffe5f9ec9ded",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-copy.csv",
-      "bytes": 6427,
-      "sha256": "43152937a0e598b3fbfdd418684311c105d44e3c5b333703ddb0b8cb28e40658",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-layout-logic.csv",
-      "bytes": 981,
-      "sha256": "26b5b75782d5aba89836c0479acd3111cc69b67853db9c2259b30ac1e966bc62",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-layouts.csv",
-      "bytes": 8760,
-      "sha256": "95d558c1b7d2552d7a75402dc68facbd16125e574985851db5729d1145e14896",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-strategies.csv",
-      "bytes": 8232,
-      "sha256": "f656be0ab0b3a85fa7fc74202e9701a7236220412d67d5f63eb6dbb100bb2639",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/data/slide-typography.csv",
-      "bytes": 735,
-      "sha256": "b96cd11dd4ff1dea8a9454b0b9e898e7f82f9243182f8f237af1f2c9b8824ce5",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/component-specs.md",
-      "bytes": 6914,
-      "sha256": "b265d979a741dd748d4e595e6898ae430faeef4f6d13d7a634fa6241b91d2da4",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/component-tokens.md",
-      "bytes": 4986,
-      "sha256": "e27f8f5999badee425c98235eabbd2cb3ebe2a1a364766d5c7a6b3134ceaaec8",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/primitive-tokens.md",
-      "bytes": 4562,
-      "sha256": "91e6caa12646c08c8aadf8e09399aed65760a25c8d80595936d81a9131118fc3",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/semantic-tokens.md",
-      "bytes": 4245,
-      "sha256": "97e16d8061bbc22e82b51966a7015e3fc990932902e4647843506669a1cdebcc",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/states-and-variants.md",
-      "bytes": 4771,
-      "sha256": "8dacb95d57d4bb37d8a99cc55515ff26da272056f837d29abc74aedcaa3ba104",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/tailwind-integration.md",
-      "bytes": 5633,
-      "sha256": "6d01092db1479dbd2060567b4232bb2b4bc16e89730ab07e1f87a3e7f5c406b9",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/references/token-architecture.md",
-      "bytes": 5365,
-      "sha256": "925f4049c4c4313d9fd5df98cdfd52004112aca49fba1664ad85e76bc9dce4d3",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/embed-tokens.cjs",
-      "bytes": 2558,
-      "sha256": "23a9ce214e3c0d2fb4c5442b3bf1222c66721f7988a181ab29dcb549a5e5f511",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/fetch-background.py",
-      "bytes": 12287,
-      "sha256": "cecedad0a9054e6e65f31ab7ba7d07eb6af2179e237c5632bc962dad69fd6d66",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/generate-slide.py",
-      "bytes": 27785,
-      "sha256": "2c56d638b396cf2210686fb5efe9ca94771621f48e62da5adefd052ac006cfad",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/generate-tokens.cjs",
-      "bytes": 4968,
-      "sha256": "aac8a0f4ec4dccf0d371f9ee5a9111e44977bb0cad7e40a3754aba5571aa1231",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/html-token-validator.py",
-      "bytes": 11894,
-      "sha256": "9556a65e7aacda23388478294ee9a5cb84b315d964fbbf754aa0dcdbcfee58e6",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/search-slides.py",
-      "bytes": 9210,
-      "sha256": "fded9548bc1bbe1303da67fabe34006c6a7c57934c9d171ea3dc3eb5f6eee010",
-      "executable": true
-    },
-    {
-      "path": "skills/design-system/scripts/slide-token-validator.py",
-      "bytes": 973,
-      "sha256": "66da5da5e8e659d405a89b342e13dd1e469e79726c46002d9d2368c3c7aaf945",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/scripts/slide_search_core.py",
-      "bytes": 14756,
-      "sha256": "2464050ae338eb50728086046b644845fa7ae943f32efead3908fdbe1473edbe",
-      "executable": true
-    },
-    {
-      "path": "skills/design-system/scripts/validate-tokens.cjs",
-      "bytes": 6047,
-      "sha256": "f68a6d9a58e36f0df83aa3f21ec7fb55f1fe981a351e78fa285af072f1cdc043",
-      "executable": false
-    },
-    {
-      "path": "skills/design-system/templates/design-tokens-starter.json",
-      "bytes": 7184,
-      "sha256": "5444f477b06bab9c72e2cc289d4a9104efef653391c9639972bcb712d5f2d81e",
-      "executable": false
     },
     {
       "path": "skills/design/SKILL.md",
@@ -1469,6 +1345,192 @@
       "executable": false
     },
     {
+      "path": "skills/design-audit/SKILL.md",
+      "bytes": 3374,
+      "sha256": "6ebe8702f91f084cc370fede14f097fd1b8ab18e9b8103f22164c7ade998db94",
+      "executable": false
+    },
+    {
+      "path": "skills/design-audit/agents/openai.yaml",
+      "bytes": 169,
+      "sha256": "a45bf28a2adb68670f1e6222da856b536c01f93225c64b4e85960aba1283212f",
+      "executable": false
+    },
+    {
+      "path": "skills/design-audit/audit-template.md",
+      "bytes": 1293,
+      "sha256": "e2623ef3106069526e2f6825d8e416674b0f481f3b11566832c39c04b117b147",
+      "executable": false
+    },
+    {
+      "path": "skills/design-audit/design-principles.md",
+      "bytes": 1410,
+      "sha256": "5ee57e6e95fdc68377fc62a990ff7daadeb8610ec07229409a7322a5980f5f94",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/SKILL.md",
+      "bytes": 7731,
+      "sha256": "c457ae566a64eb78da0101bd1e2137493d635b066a4bcf777f0bed838c864ff6",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/agents/openai.yaml",
+      "bytes": 173,
+      "sha256": "afea5ca9b79e1fbb5f5a765c2becbfc27ceee0852014d6ad4469d3394a5261de",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-backgrounds.csv",
+      "bytes": 1038,
+      "sha256": "d1bb701b87bef493d72974d6fac1087c8ba4e2df14185fe3e0c36a13fe35f3d1",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-charts.csv",
+      "bytes": 8631,
+      "sha256": "12ef876cd76e67a6553444bfa2ebf1d5d4d6216289d34db052a6e87421135033",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-color-logic.csv",
+      "bytes": 877,
+      "sha256": "ea68c737075f1615b2a7e461e2878c06bfe8f803dcabfbcc2977ffe5f9ec9ded",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-copy.csv",
+      "bytes": 6427,
+      "sha256": "43152937a0e598b3fbfdd418684311c105d44e3c5b333703ddb0b8cb28e40658",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-layout-logic.csv",
+      "bytes": 981,
+      "sha256": "26b5b75782d5aba89836c0479acd3111cc69b67853db9c2259b30ac1e966bc62",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-layouts.csv",
+      "bytes": 8760,
+      "sha256": "95d558c1b7d2552d7a75402dc68facbd16125e574985851db5729d1145e14896",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-strategies.csv",
+      "bytes": 8232,
+      "sha256": "f656be0ab0b3a85fa7fc74202e9701a7236220412d67d5f63eb6dbb100bb2639",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/data/slide-typography.csv",
+      "bytes": 735,
+      "sha256": "b96cd11dd4ff1dea8a9454b0b9e898e7f82f9243182f8f237af1f2c9b8824ce5",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/component-specs.md",
+      "bytes": 6914,
+      "sha256": "b265d979a741dd748d4e595e6898ae430faeef4f6d13d7a634fa6241b91d2da4",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/component-tokens.md",
+      "bytes": 4986,
+      "sha256": "e27f8f5999badee425c98235eabbd2cb3ebe2a1a364766d5c7a6b3134ceaaec8",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/primitive-tokens.md",
+      "bytes": 4562,
+      "sha256": "91e6caa12646c08c8aadf8e09399aed65760a25c8d80595936d81a9131118fc3",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/semantic-tokens.md",
+      "bytes": 4245,
+      "sha256": "97e16d8061bbc22e82b51966a7015e3fc990932902e4647843506669a1cdebcc",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/states-and-variants.md",
+      "bytes": 4771,
+      "sha256": "8dacb95d57d4bb37d8a99cc55515ff26da272056f837d29abc74aedcaa3ba104",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/tailwind-integration.md",
+      "bytes": 5633,
+      "sha256": "6d01092db1479dbd2060567b4232bb2b4bc16e89730ab07e1f87a3e7f5c406b9",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/references/token-architecture.md",
+      "bytes": 5365,
+      "sha256": "925f4049c4c4313d9fd5df98cdfd52004112aca49fba1664ad85e76bc9dce4d3",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/embed-tokens.cjs",
+      "bytes": 2558,
+      "sha256": "23a9ce214e3c0d2fb4c5442b3bf1222c66721f7988a181ab29dcb549a5e5f511",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/fetch-background.py",
+      "bytes": 12287,
+      "sha256": "cecedad0a9054e6e65f31ab7ba7d07eb6af2179e237c5632bc962dad69fd6d66",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/generate-slide.py",
+      "bytes": 27785,
+      "sha256": "2c56d638b396cf2210686fb5efe9ca94771621f48e62da5adefd052ac006cfad",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/generate-tokens.cjs",
+      "bytes": 4968,
+      "sha256": "aac8a0f4ec4dccf0d371f9ee5a9111e44977bb0cad7e40a3754aba5571aa1231",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/html-token-validator.py",
+      "bytes": 11894,
+      "sha256": "9556a65e7aacda23388478294ee9a5cb84b315d964fbbf754aa0dcdbcfee58e6",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/search-slides.py",
+      "bytes": 9210,
+      "sha256": "fded9548bc1bbe1303da67fabe34006c6a7c57934c9d171ea3dc3eb5f6eee010",
+      "executable": true
+    },
+    {
+      "path": "skills/design-system/scripts/slide-token-validator.py",
+      "bytes": 973,
+      "sha256": "66da5da5e8e659d405a89b342e13dd1e469e79726c46002d9d2368c3c7aaf945",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/scripts/slide_search_core.py",
+      "bytes": 14756,
+      "sha256": "2464050ae338eb50728086046b644845fa7ae943f32efead3908fdbe1473edbe",
+      "executable": true
+    },
+    {
+      "path": "skills/design-system/scripts/validate-tokens.cjs",
+      "bytes": 6047,
+      "sha256": "f68a6d9a58e36f0df83aa3f21ec7fb55f1fe981a351e78fa285af072f1cdc043",
+      "executable": false
+    },
+    {
+      "path": "skills/design-system/templates/design-tokens-starter.json",
+      "bytes": 7184,
+      "sha256": "5444f477b06bab9c72e2cc289d4a9104efef653391c9639972bcb712d5f2d81e",
+      "executable": false
+    },
+    {
       "path": "skills/distill-video/SKILL.md",
       "bytes": 13635,
       "sha256": "b2913b35ecf0d83d6fdc9eaa6038b1b5230ac370b65c631cebca2f73c9d59308",
@@ -1644,8 +1706,8 @@
     },
     {
       "path": "skills/negentropy-lens/SKILL.md",
-      "bytes": 8651,
-      "sha256": "f6958bfd787ed809f2f89c7da2f66a0c30ee03273d6fcb544ac7bc23c8892cfe",
+      "bytes": 2182,
+      "sha256": "e2f5cfc40348dde6daababed5d53477d2bb656cffa17d6a5ec3b026d3f5dcd03",
       "executable": false
     },
     {
@@ -1686,8 +1748,8 @@
     },
     {
       "path": "skills/notebooklm-studio/SKILL.md",
-      "bytes": 9448,
-      "sha256": "1f3240cdd6dfc259271044bffc4b9a201f960dfa926aff768e4a2fd29ab596a8",
+      "bytes": 9775,
+      "sha256": "93356a85cf402083ecd2459aab9cec1951930bd7f606729f40477c42e2bb81dc",
       "executable": false
     },
     {
@@ -1896,14 +1958,14 @@
     },
     {
       "path": "skills/paper-distiller/SKILL.md",
-      "bytes": 4336,
-      "sha256": "0102ad47f897971898c7633d6a2186f98d401223774eb371abfafdf3ee7488fc",
+      "bytes": 2686,
+      "sha256": "49cc044ec351c5bfca3b9d0cf6437fe15b48183a0c464045be70fd83843fcb82",
       "executable": false
     },
     {
       "path": "skills/paper-distiller/agents/openai.yaml",
-      "bytes": 246,
-      "sha256": "361155669584caa34520d270bbe764f37180a31be75db3fb8b1781a12d9c24fb",
+      "bytes": 240,
+      "sha256": "85b68e772e4ba0981295174256f2754473ecb8b72b014bc974c0e44fc6869b9d",
       "executable": false
     },
     {
@@ -1920,14 +1982,14 @@
     },
     {
       "path": "skills/paper-distiller/references/visualize-contract.md",
-      "bytes": 1988,
-      "sha256": "eccc24b0f4c83c4c1885e1dbbd2264c350c7dfe9223018e4fecc343495ab7d52",
+      "bytes": 1026,
+      "sha256": "30fdba199f920e7657233c2c3e137a318b88382681683c58da0e345ef713f7b0",
       "executable": false
     },
     {
       "path": "skills/paze-restaurant-availability/SKILL.md",
-      "bytes": 8032,
-      "sha256": "25f44ef7922dc9a5e8f0ea10f8fc72240a46ab4554a0da52ad55be06b332dbaa",
+      "bytes": 8180,
+      "sha256": "99472ecb0dde1dc2a93afbcb1bd666253ee5126b40b35a16e06dd37cb52c656e",
       "executable": false
     },
     {
@@ -2664,8 +2726,8 @@
     },
     {
       "path": "skills/react-view-transitions/SKILL.md",
-      "bytes": 12504,
-      "sha256": "8c4c0f8b5581ef473fbf388b2df7d13e02d418ab2150a912b9b7eafdf4b76a01",
+      "bytes": 12577,
+      "sha256": "7e0cf504d953c1fca47b4e0af60dad3450352c60ffdcdaab4d09c05955f49b29",
       "executable": false
     },
     {
@@ -2730,8 +2792,8 @@
     },
     {
       "path": "skills/renaissance-architecture/SKILL.md",
-      "bytes": 13235,
-      "sha256": "3f9edaaa62c4b6b13677dbfdab0f1e00d8e25849c0f4fb611c8c6786686e211a",
+      "bytes": 3654,
+      "sha256": "3903ac99b965f6d66b12a24603c4576d995183700c04a99d2f4a3357dc5028cd",
       "executable": false
     },
     {
@@ -2814,26 +2876,26 @@
     },
     {
       "path": "skills/stop-slop/SKILL.md",
-      "bytes": 2629,
-      "sha256": "7432a1d9ebdd42b27666da8458af252edf549f723fb14bcd4791425103930310",
+      "bytes": 1911,
+      "sha256": "9d5eaaf22c3f6f61cc54fa1177314d6363db6d953df0a1e2805072aba3787caa",
       "executable": false
     },
     {
       "path": "skills/stop-slop/references/examples.md",
-      "bytes": 1686,
-      "sha256": "49c592899eb4457f95d0767e15e3143569e2cef50f2927c3174e62432984cd3d",
+      "bytes": 1350,
+      "sha256": "8e9e497b0d09625904f070c484a37b830ce86ad178b324f0893122b31f60c14c",
       "executable": false
     },
     {
       "path": "skills/stop-slop/references/phrases.md",
-      "bytes": 2915,
-      "sha256": "4ca1b7e97123b5c67eff3dc97e5e977332e0b24021265c1553888a93ec33fa93",
+      "bytes": 3054,
+      "sha256": "384d2f7ba134193f762766f0fa19618d4e65e56dfc89c3ae897ba003cc551c23",
       "executable": false
     },
     {
       "path": "skills/stop-slop/references/structures.md",
-      "bytes": 5255,
-      "sha256": "ffbf1316c7fb5aaf552de005609a64a9639b546ecd76bfb0e482864d5bbe6f58",
+      "bytes": 5510,
+      "sha256": "3365718d03d1bf531b489f2f5615d264d5ac9443e4323004f64bf296985d7811",
       "executable": false
     },
     {
@@ -3432,8 +3494,8 @@
     },
     {
       "path": "skills/ui-typography/SKILL.md",
-      "bytes": 14294,
-      "sha256": "eb8f74a48bad0c5c0b612e316b9db2cf847c443f70ee0fea0a1a4e0f57083188",
+      "bytes": 2728,
+      "sha256": "c794b2cb9a359ebd3d83ed15abf337818f1fbf58f68926c148daee1a6c394814",
       "executable": false
     },
     {
@@ -3450,14 +3512,14 @@
     },
     {
       "path": "skills/ui-typography/html-entities.md",
-      "bytes": 4742,
-      "sha256": "caa91c59af521938360bc6693b628515b18450e03485945fd377a00b6a54e573",
+      "bytes": 4918,
+      "sha256": "f2bad05c0057be6d390b4eb54878a615cb7a86304c01c6151de7f23283e46279",
       "executable": false
     },
     {
       "path": "skills/vanity-engineering-review/SKILL.md",
-      "bytes": 9632,
-      "sha256": "de996c1ec1730a07bbe4ada4db9be0fecca8497dc9785f26d70de13d0f8a503d",
+      "bytes": 2624,
+      "sha256": "d92700ec4115e177a90070e27a05e12f9d70b3516cba1f83b4f416357005998d",
       "executable": false
     },
     {
@@ -3468,14 +3530,14 @@
     },
     {
       "path": "skills/vanity-engineering-review/references/detection-patterns.md",
-      "bytes": 9957,
-      "sha256": "8df92e5234ffb11be440eb00b8a8a735a9dd286ce458e9f91d75df080b0ffcb6",
+      "bytes": 2438,
+      "sha256": "27ecbdc6265407d5ae210e5d8ac5d5c5cb508e7d51fb3a1f3ef8d84942fe3679",
       "executable": false
     },
     {
       "path": "skills/vanity-engineering-review/references/kill-criteria-template.md",
-      "bytes": 8622,
-      "sha256": "3e6cbf48ae00e86ed0205426c2acdedffedd1d699815d3cdfe6e6939b9b50600",
+      "bytes": 1313,
+      "sha256": "cc42cbd86bab51817b34dc7442e959141f2d3b08afabeb400042e348d0872bec",
       "executable": false
     },
     {
@@ -4464,8 +4526,8 @@
     },
     {
       "path": "skills/video-use/SKILL.md",
-      "bytes": 22984,
-      "sha256": "37b24f7ec55473996c3eecd5ffb4d62ee4021f2c9bc947da49483cc5c65fe4eb",
+      "bytes": 6579,
+      "sha256": "d61b276fcb754f9cc148235ab90ced6da790b164c0465ceabdd57269fe327175",
       "executable": false
     },
     {
@@ -4506,8 +4568,8 @@
     },
     {
       "path": "skills/video-use/install.md",
-      "bytes": 7739,
-      "sha256": "9a78c92932864a728cfe80700d1a6bd5a4c4b4cf2d3f4694f3fd53b49fc93394",
+      "bytes": 7502,
+      "sha256": "6b645e7285dae8d72daf3db52a4c37d7b54da7f23c31eefd634f32de2b1ad154",
       "executable": false
     },
     {
@@ -4523,6 +4585,12 @@
       "executable": false
     },
     {
+      "path": "skills/video-use/references/editing-techniques.md",
+      "bytes": 8600,
+      "sha256": "78abf973c66309c7828141c401bd2bbe2df611a3b30ff307f2aff219b5eb210d",
+      "executable": false
+    },
+    {
       "path": "skills/video-use/skills/manim-video/README.md",
       "bytes": 886,
       "sha256": "a30f3ec6105d5b23bc5ec28e8e2809e9ceed49f1fd816570d5b5656d0aa65819",
@@ -4530,8 +4598,8 @@
     },
     {
       "path": "skills/video-use/skills/manim-video/SKILL.md",
-      "bytes": 11983,
-      "sha256": "478ff04a7e3ecf9157b14fc2c24b4ae3fef7460debf27c4ecbe361bf26b0ac29",
+      "bytes": 11997,
+      "sha256": "847b405ef205c57240d2dcfcef9d0293580db40cdbba1b865fdec1cd1cf1bf0f",
       "executable": false
     },
     {
@@ -4638,8 +4706,8 @@
     },
     {
       "path": "skills/visualize/SKILL.md",
-      "bytes": 18540,
-      "sha256": "b513bf370ff0b25a63ec368739455bc903cd72602c6cc981fa36988252627d5c",
+      "bytes": 4960,
+      "sha256": "cd5bc6b24c7ae1d3152155dd1c1ae280e68b8da608464fbe96dd34f9c5618610",
       "executable": false
     },
     {
@@ -4650,8 +4718,8 @@
     },
     {
       "path": "skills/visualize/references/_principles.md",
-      "bytes": 10042,
-      "sha256": "072e3356855f8622486cfd7cef3ce996919dc7cff973d1b30b0eea8d8d32b4da",
+      "bytes": 1727,
+      "sha256": "6b5fa0ad37500661dfd534e6aeb20c04f19133fcea0adced9c76a1ea4341693c",
       "executable": false
     },
     {
@@ -4812,8 +4880,8 @@
     },
     {
       "path": "skills/xiaohongshu-skills/SKILL.md",
-      "bytes": 5243,
-      "sha256": "29d60ceb58a8b7bdd4db12cf9d528f19ba891ea29b5061ea5967db435e9e2b30",
+      "bytes": 5659,
+      "sha256": "432ed58ae6d42aa703311406db649a15c8dc7b61fd513b02b118d870c45336ea",
       "executable": false
     },
     {
@@ -5028,32 +5096,32 @@
     },
     {
       "path": "skills/xiaohongshu-skills/skills/xhs-auth/SKILL.md",
-      "bytes": 6223,
-      "sha256": "5714a9945ef465c766e3f2de935cb89f1d6f45a24bc1af3e327a64fae8910171",
+      "bytes": 6272,
+      "sha256": "34159a7f6b65de8a6d6e4ae17d9e1db758b6520eb430783f41da74de53c46c6a",
       "executable": false
     },
     {
       "path": "skills/xiaohongshu-skills/skills/xhs-content-ops/SKILL.md",
-      "bytes": 6521,
-      "sha256": "f034419b37885ba67d2f08a19e2c36658dde0983f8536e15c67d4ba0eeabcf8a",
+      "bytes": 6311,
+      "sha256": "a3861430412a1190291e7996b1bf56739ba14f0b05fe3ec984d6f673142566b2",
       "executable": false
     },
     {
       "path": "skills/xiaohongshu-skills/skills/xhs-explore/SKILL.md",
-      "bytes": 7185,
-      "sha256": "fffcc1a35171964b95ee80888c29bc64e744b0e3b5db21b9c79aa77be1404a2f",
+      "bytes": 7104,
+      "sha256": "7798bd9399994f7fbb5ea6f0a430cf8a7850de7147d406a49e2e6b72969f0fcb",
       "executable": false
     },
     {
       "path": "skills/xiaohongshu-skills/skills/xhs-interact/SKILL.md",
-      "bytes": 4245,
-      "sha256": "4740b22b0bbc7d739bf54cfd7b8ffa28e837ad28d900f77b9fa2157350590e51",
+      "bytes": 4483,
+      "sha256": "3fa5b8cd0b1175f26bb360b16892d5f2228e10b3867cffef4f65e5b9dc15a9d1",
       "executable": false
     },
     {
       "path": "skills/xiaohongshu-skills/skills/xhs-publish/SKILL.md",
-      "bytes": 11533,
-      "sha256": "686ea0a0f5a82bc2dd840565f32c28582ba4663a738e548ffee1daa9042c6a50",
+      "bytes": 12509,
+      "sha256": "6c16302d89a5ef8dab25672ee6c374ad21ef6f6aea106b89aaecbc3655472e14",
       "executable": false
     },
     {
@@ -5075,7 +5143,15 @@
       "executable": false
     }
   ],
-  "source_format_warnings": [
+  "source_format_warnings": [],
+  "original_export_counts": {
+    "unique_skills": 50,
+    "packages": 44,
+    "installed_entrypoints": 62,
+    "exposed_in_current_session": 47,
+    "exported_files": 742
+  },
+  "original_source_format_warnings": [
     {
       "name": "manim-video",
       "message": "Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name"
@@ -5104,5 +5180,24 @@
       "name": "xhs-publish",
       "message": "Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name"
     }
-  ]
+  ],
+  "maintenance": {
+    "date": "2026-09-05",
+    "model_guidance": "GPT-6 Astra",
+    "changed_skill_definitions": 22,
+    "installed_entrypoints_before": 62,
+    "installed_entrypoints_after": 50,
+    "duplicate_directories_quarantined": 12,
+    "local_application": "Applied with private backup and hash-checked rollback; original source_paths are historical provenance.",
+    "session_visibility": "The 47 advertised names describe the original export session, not a verified post-maintenance runtime reload.",
+    "validation": "50 repository and 50 local definitions pass strict validation. Seven read-only scenarios evaluated; no live business operations or performance benchmark.",
+    "preexisting_archives_outside_manifest": [
+      "skills/deploy-to-vercel/Archive.zip",
+      "skills/deploy-to-vercel.zip",
+      "skills/react-best-practices.zip",
+      "skills/react-view-transitions.zip",
+      "skills/vercel-cli-with-tokens.zip",
+      "skills/web-design-guidelines.zip"
+    ]
+  }
 }

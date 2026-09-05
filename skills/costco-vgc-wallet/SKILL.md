@@ -13,7 +13,7 @@ Never expose full card numbers, CVVs, PINs, gift-card URLs, password values, or 
 
 ## Confirmation Rules
 
-- Stop for explicit user confirmation before any irreversible final purchase submit unless the current user message unambiguously pre-authorizes the exact merchant, item, quantity, recipient, payment method, and maximum total.
+- Stop for explicit user confirmation before any irreversible final purchase submit unless the current conversation unambiguously pre-authorizes the exact merchant, item, quantity, recipient, payment method, and maximum total.
 - Stop for clarification when a site changes the product, amount, fee, quantity limit, payment card, recipient, or delivery email from the expected values.
 - Use saved browser autofill and visible logged-in sessions only. Do not inspect password stores or reveal secrets.
 - For CVV lookup, use the user's local Notes app path below only as an authorized manual source. Do not store or print the CVV.
@@ -33,7 +33,7 @@ This public export uses configuration placeholders. Resolve them from the user's
 
 ## Session Ledger
 
-Keep a private ledger in the thread or automation state:
+Keep a masked operational ledger in the thread or automation state. Record card tails, amounts, order references, and statuses only; do not persist full card numbers, CVVs, PINs, or redeemable links:
 
 ```text
 purchase_time:
@@ -97,7 +97,7 @@ User-facing reports may include counts, order numbers, card tails, amounts used,
    - Open the email.
    - Click `View Gift`.
    - Extract the Visa VGC details needed for later checkout: cardholder/name as shown, full card number, expiration date, CVV, and dollar amount.
-   - Store the details only in the private session ledger.
+   - Use payment secrets only within the authorized checkout flow. Keep only masked references and balances in the ledger; do not persist full card numbers, CVVs, or redeemable links.
    - Mark the email/card processed using a non-sensitive identifier such as card tail and amount.
 4. If fewer VGC emails arrive than expected, report how many are missing and, if the user requested monitoring, create or continue a timed monitor.
 
@@ -106,7 +106,7 @@ User-facing reports may include counts, order numbers, card tails, amounts used,
 1. Open Costco in Chrome and sign in as `COSTCO_EMAIL` using saved login where available.
 2. Search for and select the `$100` Costco eGift Card / Digital Shop Card.
 3. Send each Costco eGift Card to `PRIMARY_EMAIL` unless the user overrides the recipient.
-4. Pay with the current VGC from the ledger:
+4. Use the ledger to identify the current VGC, then obtain its payment details from the authorized source for this checkout:
    - A `$200` VGC normally funds two `$100` Costco eGift orders.
    - Ignore stale saved card digits left in fields; enter the current VGC details directly.
    - Set cardholder name to `CARDHOLDER_NAME` when required.
