@@ -1,4 +1,4 @@
-# Structures to Avoid
+# Structures to Examine
 
 ## Binary Contrasts
 
@@ -65,7 +65,7 @@ These announce insight rather than deliver it.
 
 ## False Agency
 
-Giving inanimate things human verbs. Complaints don't "become" fixes. Bets don't "live or die." Decisions don't "emerge." A person does something to make those things happen. AI loves this because it avoids naming the actor.
+Check whether personification obscures a relevant actor. Nonhuman subjects and ordinary metaphors can be clear and accurate; do not replace them automatically. The examples below suggest alternatives only when they improve the intended meaning.
 
 | Pattern | Problem |
 |---------|---------|
@@ -77,7 +77,7 @@ Giving inanimate things human verbs. Complaints don't "become" fixes. Bets don't
 | "the data tells us" | Data sits there. Someone reads it and draws a conclusion. |
 | "the market rewards" | Markets don't reward. Buyers pay for things. |
 
-**Instead:** Name the human. "The team fixed it that week" beats "the complaint becomes a fix." If no specific person fits, use "you" to put the reader in the seat.
+Name an actor when known and relevant. Do not invent a person or change an impersonal technical explanation into second person.
 
 ## Narrator-from-a-Distance
 
@@ -94,7 +94,7 @@ Floating above the scene instead of putting the reader in it.
 
 ## Passive Voice
 
-Every sentence needs a subject doing something. Passive voice hides the actor and drains energy.
+Prefer active voice when naming the actor matters. Passive voice is appropriate when the actor is unknown, irrelevant, or intentionally secondary. Preserve it when rewriting would change meaning or add an unsupported attribution.
 
 | Pattern | Fix |
 |---------|-----|
@@ -103,13 +103,13 @@ Every sentence needs a subject doing something. Passive voice hides the actor an
 | "Mistakes were made" | Name who made them |
 | "The decision was reached" | Name who decided |
 
-**Instead:** Find the actor. Put them at the front of the sentence.
+When the actor is known and relevant, consider putting it at the front of the sentence.
 
-## Sentence Starters to Avoid
+## Repetitive Sentence Starters
 
 | Pattern | Fix |
 |---------|-----|
-| Sentences starting with What, When, Where, Which, Who, Why, How | Restructure. Lead with the subject or the verb. |
+| Repeated What/When/Where/Which/Who/Why/How openers | Vary only when the repetition distracts; preserve useful questions and conditions. |
 | Paragraphs starting with "So" | Start with content |
 | Sentences starting with "Look," | Remove |
 
@@ -119,10 +119,10 @@ Wh- openers become a crutch. "What makes this hard is..." becomes "The constrain
 
 | Pattern | Fix |
 |---------|-----|
-| Three-item lists | Use two items or one |
+| Repetitive list rhythms | Keep however many items the content requires; vary surrounding prose if needed. |
 | Questions answered immediately | Let questions breathe or cut them |
 | Every paragraph ends punchily | Vary endings |
-| Em-dashes | Remove. Use commas or periods. No em dashes at all. |
+| Overused em dashes | Follow the requested editorial style and use punctuation that best expresses the relation. |
 | Staccato fragmentation | Don't stack short punchy sentences |
 | "Not always. Not perfectly." | Hedging disguised as reassurance |
 
@@ -131,4 +131,4 @@ Wh- openers become a crutch. "What makes this hard is..." becomes "The constrain
 | Pattern | Problem |
 |---------|---------|
 | Lazy extremes (every, always, never, everyone, everybody, nobody) | False authority. Use specifics instead of sweeping claims. |
-| All adverbs (-ly words, "really," "just," "literally," "genuinely," "honestly," "simply," "actually") | Empty emphasis. See phrases.md for full list. |
+| Redundant intensifiers | Remove empty emphasis, while retaining meaningful adverbs and uncertainty. See phrases.md for examples. |

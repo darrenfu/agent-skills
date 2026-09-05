@@ -32,7 +32,7 @@ When a new user asks to initialize, set up, or start using this skill, make the 
 python scripts/bootstrap_notebooklm.py --json --print-guide
 ```
 
-2. If `notebooklm` is missing, ask for permission to install dependencies, then run:
+2. If `notebooklm` is missing, inspect the bootstrap install target. A setup request covers needed dependencies within the intended isolated environment when host policy permits it. Ask only if installation would change an unrelated/shared environment or needs approval under that policy. Then run:
 
 ```bash
 python scripts/bootstrap_notebooklm.py --install --print-guide
@@ -65,7 +65,7 @@ Then give the user the local URL. If port `8765` is occupied, choose the next av
 python scripts/validate_environment.py --json
 ```
 
-If `notebooklm` is missing, explain that NotebookLM automation needs `notebooklm-py` plus Google authentication. Ask before installing packages or opening browser login.
+If `notebooklm` is missing, explain the needed dependency and use the scoped setup rules above. An authorized setup can open the login flow; the user still chooses the account, completes MFA, and grants access. Verify actual source/tool access after login before claiming readiness.
 
 3. Build a source manifest before uploading:
 

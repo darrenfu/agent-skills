@@ -130,15 +130,17 @@ is safe even for apps that normally foreground on media-load
 
 ## Defaults — always prefer cua-driver over shell shims
 
-**Default transport is the `cua-driver` CLI** — `Bash` shelling out
-to `cua-driver <tool-name> '<JSON-args>'`. MCP tools (prefix
-`mcp__cua-driver__*`) only when the user explicitly asks for them.
-CLI wins because it picks up rebuilds instantly, failures are
-easier to diagnose, and there's no per-tool schema-load overhead.
+Prefer the available CuaDriver transport that fits the task and the user's
+chosen interface: the `cua-driver` CLI or an exposed CuaDriver MCP tool.
+A CLI fallback can help diagnose local failures; MCP can provide typed tool
+schemas. Switching between supported transports does not require a new
+permission question when the target and authorized action are unchanged.
 
-Every reference to `click(...)`, `get_window_state(...)` etc. in this
-skill means `cua-driver click '{...}'` — translate to MCP form only
-when MCP is requested.
+The examples below use CLI operations such as `cua-driver click '{...}'`.
+For MCP, read the actual exposed schema and adapt the operation; do not
+invent tool names or copy arguments between incompatible interfaces.
+Preserve the no-foreground contract and current UI grounding with either
+transport. Verify ambiguous mutations before retrying.
 
 ### Claude Code computer-use compatibility mode
 
@@ -326,7 +328,7 @@ Two orthogonal axes shape what the agent can do.
 |---|---|---|
 | **`som`** (default) | tree + screenshot | `element_index` preferred; pixel fallback |
 | **`ax`** | tree only (no PNG) | `element_index` only |
-| **`vision`** | PNG only (no tree) | pixel only — see [SCREENSHOT.md](./SCREENSHOT.md) |
+| **`vision`** | PNG only (no tree) | pixel only — see [pixel-coordinate guidance](#pixel-coordinate-clicks) |
 
 `vision` was renamed from `screenshot` — the old name still decodes
 as a deprecated alias, so an on-disk `"capture_mode": "screenshot"`
@@ -341,10 +343,9 @@ When a snapshot looks wrong (tiny screenshot / empty tree), check
 
 Pure-vision mode has its own caveats — Claude Code's vision
 pipeline downsamples dense text aggressively, so pixel grounding
-takes multiple correction cycles on text-heavy UIs. Read
-[SCREENSHOT.md](./SCREENSHOT.md) before driving anything in that
-mode; it documents the iterate/annotate/verify recipe plus the
-JPEG-over-PNG finding.
+takes multiple correction cycles on text-heavy UIs. Use the [pixel-coordinate guidance](#pixel-coordinate-clicks) below and
+the installed tool's current documentation. Some upstream versions reference
+SCREENSHOT.md, which is absent from this package; do not block on that file.
 
 **Window state → what works**
 

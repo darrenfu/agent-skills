@@ -1,59 +1,31 @@
-# Before/After Examples
+# Meaning-preserving editing examples
 
-## Example 1: Throat-Clearing + Binary Contrast
+These examples illustrate local improvements, not universal rules for a genre.
 
-**Before:**
-> "Here's the thing: building products is hard. Not because the technology is complex. Because people are complex. Let that sink in."
+## Remove a redundant opener
 
-**After:**
-> "Building products is hard. Technology is manageable. People aren't."
+Before: “It turns out that most teams struggle with alignment.”
+After: “Most teams struggle with alignment.”
 
-**Changes:** Removed opener, binary contrast structure, and emphasis crutch. Direct statements.
+The edit removes the opener while retaining the quantifier “most.” It does not turn a qualified statement into a universal claim.
 
----
+## Preserve uncertainty and passive voice
 
-## Example 2: Filler + Unnecessary Reassurance
+Before: “It is worth noting that the service may fail intermittently. The cause has not been established.”
+After: “The service may fail intermittently. The cause has not been established.”
 
-**Before:**
-> "It turns out that most teams struggle with alignment. The uncomfortable truth is that nobody wants to admit they're confused. And that's okay."
+“May,” “intermittently,” and the passive construction convey necessary information. There is no reason to invent an actor or assert a cause.
 
-**After:**
-> "Teams struggle with alignment. Nobody admits confusion."
+## Replace vague jargon with a specific action
 
-**Changes:** Cut hedging ("most"), removed throat-clearing phrases, deleted permission-granting ending.
+Before: “We need to leverage the existing cache to reduce repeated database reads.”
+After: “We need to use the existing cache to reduce repeated database reads.”
 
----
+The edit preserves the action and its purpose; it does not introduce a different recommendation.
 
-## Example 3: Business Jargon Stack
+## Retain useful enumeration
 
-**Before:**
-> "In today's fast-paced landscape, we need to lean into discomfort and navigate uncertainty with clarity. This matters because your competition isn't waiting."
+Before: “We measured latency, throughput, and error rate.”
+After: unchanged.
 
-**After:**
-> "Move faster. Your competition is."
-
-**Changes:** Eliminated jargon entirely. Core message in six words.
-
----
-
-## Example 4: Dramatic Fragmentation
-
-**Before:**
-> "Speed. Quality. Cost. You can only pick two. That's it. That's the tradeoff."
-
-**After:**
-> "Speed, quality, cost—pick two."
-
-**Changes:** Single sentence. No performative emphasis.
-
----
-
-## Example 5: Rhetorical Setup
-
-**Before:**
-> "What if I told you that the best teams don't optimize for productivity? Here's what I mean: they optimize for learning. Think about it."
-
-**After:**
-> "The best teams optimize for learning, not productivity."
-
-**Changes:** Direct claim. No rhetorical scaffolding.
+Three items are appropriate because three metrics were measured. Editing should stop when the sentence already serves the task.

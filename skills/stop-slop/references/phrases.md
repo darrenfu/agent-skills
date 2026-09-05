@@ -1,4 +1,4 @@
-# Phrases to Remove
+# Phrases to Examine
 
 ## Throat-Clearing Openers
 
@@ -52,7 +52,7 @@ Replace with plain language.
 
 ## Adverbs
 
-Kill all adverbs. No -ly words. No softeners, no intensifiers, no hedges.
+Remove redundant intensifiers when they add no meaning. Keep adverbs, hedges, and qualifiers that express frequency, uncertainty, timing, or a meaningful distinction. A word ending in -ly is not itself a defect.
 
 Specific offenders:
 

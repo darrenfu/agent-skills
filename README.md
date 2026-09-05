@@ -6,7 +6,7 @@ Skills follow the [Agent Skills](https://agentskills.io/) format.
 
 ## Installed custom skill export
 
-This personal fork contains **50 installed custom skills** across 44 packages, audited on 2026-09-05. See the [complete catalog and restore notes](docs/installed-skills/README.md) and [file manifest](docs/installed-skills/manifest.json). The catalog distinguishes 47 session-visible skills from 3 installed definitions that were not exposed in that session. Personal defaults are replaced with configuration placeholders; original skill licenses remain with their packages.
+This personal fork contains **50 installed custom skills** across 44 packages, audited on 2026-09-05. See the [complete catalog and restore notes](docs/installed-skills/README.md) and [file manifest](docs/installed-skills/manifest.json). The catalog distinguishes 47 session-visible skills from 3 installed definitions that were not exposed in that session. Personal defaults are replaced with configuration placeholders; original skill licenses remain with their packages. The [Astra 6 maintenance report](docs/installed-skills/astra6-maintenance.md) describes 22 revised skill definitions, removal of 12 duplicate local entrypoints, and verification limits.
 
 [![skills.sh](https://skills.sh/b/darrenfu/agent-skills)](https://skills.sh/darrenfu/agent-skills)
 

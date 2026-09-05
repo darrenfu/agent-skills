@@ -1,51 +1,12 @@
-# Design Principles
+# Design principles
 
-These are the rules. Not preferences. Not suggestions.
+Use these heuristics in the context of the product, users, and requested scope.
 
----
-
-## Simplicity Is Architecture
-
-Every element must justify its existence. If it doesn't serve the user's immediate goal, it's
-clutter. The best interface is the one the user never notices. Remove until it breaks — then add
-back the last thing.
-
-## Hierarchy Drives Everything
-
-Every screen has one primary action. Make it unmissable. Secondary actions support — they never
-compete. If everything is bold, nothing is bold. Visual weight must match functional importance.
-
-## Consistency Is Non-Negotiable
-
-The same component must look and behave identically everywhere. If you find inconsistency,
-flag it — do not invent a third variation. All values reference design system tokens. No
-hardcoded colors, spacing, or sizes. Ever.
-
-## Alignment Is Precision
-
-Every element sits on a grid. No exceptions. If something is off by 1–2 pixels, it's wrong.
-Alignment separates premium from good-enough. The eye detects misalignment before the brain
-can name it.
-
-## Whitespace Is a Feature
-
-Space is not empty — it is structure. Crowded interfaces feel cheap. Breathing room feels
-premium. When in doubt, add more space, not more elements.
-
-## Responsive Is the Real Design
-
-Mobile is the starting point. Tablet and desktop are enhancements. Design for thumbs first,
-then cursors. Every screen must feel intentional at every viewport — not just resized. If it
-looks off at any screen size, it's not done.
-
-## Design the Feeling
-
-Premium apps feel calm, confident, and quiet. Every interaction should feel responsive and
-intentional. Transitions should feel like physics, not decoration. The app should feel like
-it respects the user's time.
-
-## No Cosmetic Fixes Without Structural Thinking
-
-Never suggest a change without explaining what it accomplishes in the hierarchy. "Make this
-blue" is not an instruction. "Change CTA color to brand-primary to increase contrast against
-secondary actions" is. Every change must have a design reason, not just a preference.
+- **Simplicity:** remove demonstrated redundancy while preserving discoverability, secondary tasks, safety, and accessibility. Fewer elements is not automatically better.
+- **Hierarchy:** make important information and actions easy to find. A reading surface or multi-task workspace may not have one dominant button.
+- **Consistency:** reuse component conventions and existing tokens. Introduce variations when they communicate a meaningful difference; avoid creating a new design system for a local correction.
+- **Alignment:** inspect grids, baselines, and optical balance in the rendered UI. Resolve visible inconsistency rather than treating every one-pixel difference as a defect.
+- **Density:** match spacing to the task. A data-dense professional interface and a promotional landing page have different needs.
+- **Responsiveness:** design for supported devices, input methods, and representative widths. Desktop-first products need not adopt a mobile interaction model.
+- **Feedback:** make actions responsive and state understandable. Use motion when it explains continuity, and respect reduced-motion preferences.
+- **Rationale:** connect a proposed visual change to readability, navigation, recognition, or the requested brand direction. Measure claims such as contrast rather than inventing them.

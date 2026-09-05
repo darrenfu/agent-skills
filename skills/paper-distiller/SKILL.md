@@ -1,57 +1,26 @@
 ---
 name: paper-distiller
-description: Distill research papers into understandable, teachable artifacts and a final self-contained HTML visualization. Use when the user asks to explain, summarize, teach, 精读, 速读, distill, 蒸馏, or turn a paper into a public-friendly explanation; supports paper PDFs, arXiv/alphaXiv/DOI/URL links, screenshots of a paper title/page, pasted titles, abstracts, or mixed inputs.
+description: Explain or distill a research paper from a PDF, arXiv/DOI link, title, abstract, or screenshot. Use for paper-specific summaries, method explanations, deep reads, and teaching artifacts; match the requested depth and format.
 ---
 
 # Paper Distiller
 
-Transform a research paper into a learning object the user can understand, retell, and reuse. The output should explain the paper's motivation, core idea, algorithm, experiments, limits, and public-facing narrative in both fast-read and deep-read forms, then render the result through the `visualize` skill as a self-contained HTML page.
-
-## Core Rule
-
-Do not mechanically summarize sections. First build a mental model: why the paper exists, what bottleneck it attacks, what lever the method pulls, how the algorithm runs, what the evidence proves, and what remains uncertain.
+Explain the paper's problem, mechanism, evidence, and limits at the depth the user requested. A question about one equation can receive one focused explanation; it does not require a full teaching package.
 
 ## Workflow
 
-1. **Identify the input type.** Use [input-handling.md](references/input-handling.md) for URLs, PDFs, screenshots, titles, abstracts, and mixed inputs.
-2. **Acquire the paper.** Prefer primary sources. If only a screenshot/title is provided, extract the visible title/authors, search the web, and verify against at least one official or paper-host source when possible.
-3. **Read in two passes.**
-   - Fast pass: title, abstract, introduction, method overview, main figures/tables, conclusion.
-   - Deep pass: problem setup, algorithm details, equations, training/inference procedure, experiments, ablations, limitations, appendix when needed.
-4. **Create the distillation.** Follow [distillation-template.md](references/distillation-template.md). Produce bilingual Chinese/English headings or paired bullets when the user asks for bilingual output; otherwise use the user's language.
-5. **Separate evidence from inference.** For important claims, cite the paper section, figure, table, equation, appendix, or source URL. Mark anything not explicitly stated as "Inference / 我的推断".
-6. **Render with `visualize`.** Use [visualize-contract.md](references/visualize-contract.md). The final artifact must support fast-read and deep-read views.
-7. **Report the result.** Provide the local HTML path, source used, and any caveats such as incomplete OCR, unavailable PDF, or claims needing manual verification.
+1. Identify the paper and available source layers using [input-handling.md](references/input-handling.md). Prefer the actual paper and official supplementary material. Verify a title or screenshot against a primary source before attributing claims.
+2. Read the sections needed to answer. For an overview, start with the abstract, motivation, main method, results, and limitations. For a technical deep read, inspect the relevant equations, evaluation setup, ablations, and appendix. Report unavailable source material rather than inventing it.
+3. Explain the motivation before new abstractions. Use a concrete example when it clarifies a procedure. Distinguish the paper's claims, its measured evidence, background knowledge, and your inference; cite sections, figures, tables, or source URLs near substantive claims.
+4. Match the user's language, length, audience, and output format. For an unspecified summary, provide the main idea, supporting result, and most consequential limitation, then expand only where needed.
+5. For a requested full teaching artifact, select relevant sections from [distillation-template.md](references/distillation-template.md). The template is a menu, not a requirement to produce every retelling variant.
+6. Use a diagram or interactive illustration when it materially improves understanding. For a requested HTML teaching page, see [visualize-contract.md](references/visualize-contract.md). For PPTX, Google Slides, a document, or a chat answer, use that format and the appropriate available authoring tools. HTML is optional.
+7. Verify the delivered explanation against the source; for an artifact, also inspect its rendering and report its actual path or link.
 
-## Output Shape
+## Quality checks
 
-Every full run should produce:
-
-- Fast-read version: 5-sentence thesis, 3 takeaways, one key figure/table explanation, 60-second public script.
-- Deep-read version: motivation, problem setup, algorithm, equations/notation, worked example, experiments, limitations, follow-up questions.
-- Teaching layers: plain-language explanation, analogy, technical explanation, and analogy boundary for each core concept.
-- Retelling kit: 60-second version, 3-minute version, nontechnical version, ML-engineer version, likely Q&A.
-- HTML visualization: interactive single-page or slide-like page generated by `visualize`.
-
-## Mode Selection
-
-- If the user says `速读`, `quick`, or `fast-read`, prioritize the paper's main line and practical retelling. Do not over-focus on formula derivations.
-- If the user says `精读`, `deep`, or `deep-read`, inspect formulas, pseudocode, ablations, evaluation setup, assumptions, and appendix material.
-- If no mode is specified, first produce fast-read, then identify the 3-5 places where deep reading would most change understanding.
-
-## Quality Bar
-
-- Explain why the paper matters before explaining what the method does.
-- Use a concrete toy example for the algorithm whenever the method is procedural.
-- Name baselines and metrics before interpreting experimental wins.
-- State what the paper did not prove.
-- Do not turn general field knowledge into paper claims.
-- Do not hide uncertainty. Use "paper says", "evidence suggests", and "my inference" distinctly.
-
-## Useful Invocation Pattern
-
-When passing the final structured distillation to `visualize`, phrase the request as:
-
-```text
-Use $visualize to render this paper distillation into a self-contained HTML page with fast-read and deep-read modes, a motivation funnel, algorithm flow, worked example, evidence badges, limitations, and retelling scripts. Save it to <output-dir>.
-```
+- Name the baseline and metric before interpreting a reported improvement.
+- Explain notation before using it; mark where an analogy stops applying.
+- Separate what was tested from a proposed application or unproven generalization.
+- Do not present OCR, an abstract-only reading, or a secondary summary as a complete reading of the paper.
+- Do not add a second language, multiple scripts, or fast/deep interface modes unless useful to the requested deliverable.

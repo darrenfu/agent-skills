@@ -1,6 +1,6 @@
 ---
 name: stop-slop
-description: Remove AI writing patterns from prose. Use when drafting, editing, or reviewing text to eliminate predictable AI tells.
+description: Edit or review prose for repetitive AI-style phrasing, filler, and unnatural rhythm when the user requests clearer, more natural writing or a slop check. Preserve meaning, voice, and uncertainty.
 metadata:
   trigger: Writing prose, editing drafts, reviewing content for AI patterns
   author: Hardik Pandya (https://hvpandya.com)
@@ -8,60 +8,20 @@ metadata:
 
 # Stop Slop
 
-Eliminate predictable AI writing patterns from prose.
+Edit prose for clarity and a natural voice while preserving the author's meaning, uncertainty, register, and intended emphasis.
 
-## Core Rules
+## Workflow
 
-1. **Cut filler phrases.** Remove throat-clearing openers, emphasis crutches, and all adverbs. See [references/phrases.md](references/phrases.md).
+1. Identify the requested edit: light cleanup, substantive rewrite, or style review. Preserve the existing voice unless the user asks to change it.
+2. Remove empty introductions, repeated conclusions, vague praise, and formulaic transitions when they add no meaning. Use [phrases](references/phrases.md), [structures](references/structures.md), and [examples](references/examples.md) as diagnostic examples, not literal blacklists.
+3. Prefer concrete wording and active voice when the actor matters. Passive voice, nonhuman subjects, adverbs, hedges, and emphasis are appropriate when they preserve technical accuracy or the intended tone.
+4. Vary repetitive sentence patterns where it improves reading. Do not enforce quotas for sentence length, list size, punctuation, or rhetorical devices.
+5. Preserve quotations, code, identifiers, numerical claims, attribution, and meaningful qualifiers. Do not strengthen an uncertain claim just to make it sound decisive.
+6. Read the result once for meaning, fluency, and requested length. Return the edited text; add an explanation only when requested or needed to flag a substantive ambiguity.
 
-2. **Break formulaic structures.** Avoid binary contrasts, negative listings, dramatic fragmentation, rhetorical setups, false agency. See [references/structures.md](references/structures.md).
+## Review criteria
 
-3. **Use active voice.** Every sentence needs a human subject doing something. No passive constructions. No inanimate objects performing human actions ("the complaint becomes a fix").
-
-4. **Be specific.** No vague declaratives ("The reasons are structural"). Name the specific thing. No lazy extremes ("every," "always," "never") doing vague work.
-
-5. **Put the reader in the room.** No narrator-from-a-distance voice. "You" beats "People." Specifics beat abstractions.
-
-6. **Vary rhythm.** Mix sentence lengths. Two items beat three. End paragraphs differently. No em dashes.
-
-7. **Trust readers.** State facts directly. Skip softening, justification, hand-holding.
-
-8. **Cut quotables.** If it sounds like a pull-quote, rewrite it.
-
-## Quick Checks
-
-Before delivering prose:
-
-- Any adverbs? Kill them.
-- Any passive voice? Find the actor, make them the subject.
-- Inanimate thing doing a human verb ("the decision emerges")? Name the person.
-- Sentence starts with a Wh- word? Restructure it.
-- Any "here's what/this/that" throat-clearing? Cut to the point.
-- Any "not X, it's Y" contrasts? State Y directly.
-- Three consecutive sentences match length? Break one.
-- Paragraph ends with punchy one-liner? Vary it.
-- Em-dash anywhere? Remove it.
-- Vague declarative ("The implications are significant")? Name the specific implication.
-- Narrator-from-a-distance ("Nobody designed this")? Put the reader in the scene.
-- Meta-joiners ("The rest of this essay...")? Delete. Let the essay move.
-
-## Scoring
-
-Rate 1-10 on each dimension:
-
-| Dimension | Question |
-|-----------|----------|
-| Directness | Statements or announcements? |
-| Rhythm | Varied or metronomic? |
-| Trust | Respects reader intelligence? |
-| Authenticity | Sounds human? |
-| Density | Anything cuttable? |
-
-Below 35/50: revise.
-
-## Examples
-
-See [references/examples.md](references/examples.md) for before/after transformations.
+Could a reader identify the main point sooner? Does each retained detail help? Did the edit change a fact, level of certainty, or voice? Fix observed problems rather than iterating toward an arbitrary self-score.
 
 ## License
 

@@ -1,79 +1,13 @@
-# Audit Output Template
+# Design audit reporting template
 
-Use this exact structure when presenting audit findings. No deviations.
+Use this structure for a substantial audit; omit empty sections and shorten it for a component review. For an authorized implementation, report the result rather than presenting another approval gate.
 
----
+- **Scope and evidence:** inspected surfaces, states, viewports, and access limitations.
+- **Findings:** observed problem → concrete proposed change → user impact. Group by severity only when useful.
+- **Implementation:** relevant component/file, existing token or proposed value, and behavior to preserve. Distinguish inspected values from illustrative examples.
+- **Verification:** checks appropriate to the affected UI and project risk tier; list what was actually observed.
+- **Open decisions:** only missing product choices or newly expanded scope that need user input.
 
-```
-DESIGN AUDIT RESULTS
+Use critical/refinement/polish phases if they help sequence a large body of work. Do not require all three or approval after every phase. Existing authorization covers unchanged scope. Reuse the design system; a new token does not create a separate approval requirement unless project rules or the user require one.
 
-Overall Assessment: [1–2 sentences on the current state of the design]
-
-────────────────────────────────────────────
-
-PHASE 1 — Critical
-(Visual hierarchy, usability, responsiveness, or consistency issues that actively hurt UX)
-
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-
-Review: [Why these are highest priority]
-
-────────────────────────────────────────────
-
-PHASE 2 — Refinement
-(Spacing, typography, color, alignment, iconography that elevate the experience)
-
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-
-Review: [Why this sequencing]
-
-────────────────────────────────────────────
-
-PHASE 3 — Polish
-(Micro-interactions, transitions, empty/loading/error states, dark mode, subtle details)
-
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-- [Screen/Component]: [What's wrong] → [What it should be] → [Why this matters]
-
-Review: [Why these are Phase 3 and expected cumulative impact]
-
-────────────────────────────────────────────
-
-DESIGN_SYSTEM UPDATES REQUIRED
-
-- [New tokens, colors, spacing values, typography changes, or component additions needed]
-- These must be approved and added to DESIGN_SYSTEM before implementation begins
-
-────────────────────────────────────────────
-
-IMPLEMENTATION NOTES FOR BUILD AGENT
-
-- [Exact file, exact component, exact property, exact old value → exact new value]
-- Written so a build agent can execute without design interpretation
-- No ambiguity
-
-BAD:  "Make the cards feel softer"
-GOOD: "CardComponent border-radius: 8px → 12px per updated DESIGN_SYSTEM token border-radius-lg"
-
-BAD:  "Improve the spacing"
-GOOD: "DashboardHeader margin-bottom: 16px → 24px (DESIGN_SYSTEM spacing-lg)"
-
-BAD:  "The button needs more contrast"
-GOOD: "PrimaryButton background: #6B7280 → #2563EB (DESIGN_SYSTEM color-brand-primary).
-       Contrast ratio with white text improves from 3.8:1 → 8.6:1 (WCAG AAA)"
-```
-
----
-
-## Rules for This Template
-
-1. Every finding follows the pattern: **what's wrong → what it should be → why it matters**
-2. Implementation notes must reference design system tokens, not raw values
-3. If a new token is needed, it goes in DESIGN_SYSTEM UPDATES first
-4. No vague language. No "feels" without a measurable change attached.
-5. Phase assignment is strict:
-   - Phase 1: Actively hurts usability or breaks consistency
-   - Phase 2: Doesn't hurt, but clearly below professional standard
-   - Phase 3: Already functional, but not yet premium
+Measure contrast or layout values before reporting them as facts. Prefer an exact selector and reproducible observation over adjectives such as “premium.”

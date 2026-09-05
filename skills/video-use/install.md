@@ -5,17 +5,17 @@ description: Install video-use into the current agent (Claude Code, Codex, Herme
 
 # video-use install
 
-Use this file only for first-time install or reconnect. For daily editing, read `SKILL.md`. Always read `helpers/` — that's where the scripts live.
+Use this file only for first-time install or reconnect. For daily editing, read `SKILL.md`. Inspect only the helpers needed for the selected workflow.
 
 ## What you're doing
 
 You're setting up a conversation-driven video editor for the user. After install, the user drops raw footage into any folder, runs their agent (`claude`, `codex`, etc.) there, and says "edit these into a launch video." You do the rest by reading `SKILL.md`.
 
-Three things must exist on this machine:
+For local editing, verify the applicable dependencies:
 
 1. The `video-use` repo cloned somewhere stable.
 2. `ffmpeg` on `$PATH` (plus optional `yt-dlp` for online sources).
-3. An ElevenLabs API key in `.env` at the repo root (for Scribe transcription).
+3. Only for the bundled Scribe transcription path, securely configured ElevenLabs credentials; another suitable transcript path can be used instead.
 
 And one thing must be true about the current agent:
 
@@ -23,7 +23,7 @@ And one thing must be true about the current agent:
 
 ## Install prompt contract
 
-- Do everything yourself. Only ask the user for things you cannot generate — the ElevenLabs API key, and confirmation before `brew install`.
+- Complete authorized setup within host policy. Ask only for a required user decision or an install permission the host actually requires. Let the user configure secrets through an approved secure channel.
 - Prefer a stable clone path like `~/Developer/video-use` (not `/tmp`, not `~/Downloads`).
 - The skill references helpers by bare name (`transcribe.py`, `render.py`). That works because SKILL.md and `helpers/` ship together — keep them as siblings when you register the skill.
 - After install, verify by running one real command against one real file. Don't declare success on file-existence checks alone.
@@ -37,7 +37,7 @@ test -d ~/Developer/video-use || git clone https://github.com/browser-use/video-
 cd ~/Developer/video-use
 ```
 
-If the repo is already there, `git pull --ff-only` and continue.
+If a configured or customized installation already exists, inspect and use it. Update it only when requested; do not overwrite local changes with an upstream pull during ordinary setup.
 
 ### 2. Install Python deps
 
@@ -89,41 +89,13 @@ Figure out which agent you are running under, and register once. A symlink of th
 
 If you can't tell which agent you're in, ask the user once: "which agent am I running under — Claude Code, Codex, or something else?" Then pick the right target.
 
-### 5. ElevenLabs API key
+### 5. Optional ElevenLabs configuration
 
-Scribe (ElevenLabs) does all transcription. Without a key, nothing transcribes.
+The bundled Scribe transcription helper requires ElevenLabs credentials. Trims, crops, grading, and work using another suitable transcript provider do not. Configure this dependency only when the selected workflow needs it.
 
-1. Check existing state in this order and stop at the first hit:
+Check whether `ELEVENLABS_API_KEY` is configured without printing its value. Use the host's approved secret configuration or a user-managed, access-restricted local environment file. Do not ask the user to paste a key into chat, put it in a command transcript, or commit it. Do not overwrite an existing environment file or unrelated settings.
 
-    ```bash
-    # a) env var already exported
-    [ -n "$ELEVENLABS_API_KEY" ] && echo "env"
-    # b) .env at repo root already has it
-    grep -q '^ELEVENLABS_API_KEY=..' ~/Developer/video-use/.env 2>/dev/null && echo "dotenv"
-    ```
-
-2. If neither is set, ask the user exactly once:
-
-    > I need an ElevenLabs API key for transcription (word-level timestamps, speaker diarization, filler tagging). Grab one at https://elevenlabs.io/app/settings/api-keys and paste it here — I'll write it to `~/Developer/video-use/.env`. Or if you already have it exported as `ELEVENLABS_API_KEY`, say "use env" and I'll skip.
-
-    When the user pastes a key, write it to `~/Developer/video-use/.env`:
-
-    ```bash
-    printf 'ELEVENLABS_API_KEY=%s\n' "$KEY" > ~/Developer/video-use/.env
-    chmod 600 ~/Developer/video-use/.env
-    ```
-
-    Never echo the key back in tool output. Never commit `.env`.
-
-3. Sanity check with a cheap, quota-free call:
-
-    ```bash
-    curl -s -o /dev/null -w '%{http_code}\n' \
-      -H "xi-api-key: $(sed -n 's/^ELEVENLABS_API_KEY=//p' ~/Developer/video-use/.env)" \
-      https://api.elevenlabs.io/v1/user
-    ```
-
-    `200` means the key works. `401` means the user pasted a wrong/expired key — ask once more and stop. Anything else (network, 5xx), move on and verify during first real transcription.
+If credentials are unavailable, use another suitable configured transcription/alignment method when possible, preserving the provider schema expected by any helper. Otherwise explain the specific blocked transcription step and let the user configure access securely. Validate provider access only when needed for that workflow; do not claim a credential works from its presence alone.
 
 ### 6. Verify end-to-end
 

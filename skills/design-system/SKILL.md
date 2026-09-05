@@ -2,8 +2,8 @@
 name: design-system
 description: Token architecture, component specifications, and slide generation. Three-layer
   tokens (primitive→semantic→component), CSS variables, spacing/typography scales,
-  component specs, strategic slide creation. Use for design tokens, systematic design,
-  brand-compliant presentations.
+  component specs, and brand token integration. Use when creating or maintaining a
+  design system, defining reusable component styles, or applying existing brand tokens.
 license: MIT
 metadata:
   author: claudekit
@@ -25,7 +25,7 @@ Token architecture, component specifications, systematic design, slide generatio
 - Spacing/typography scales
 - Design-to-code handoff
 - Tailwind theme configuration
-- **Slide/presentation generation**
+- Applying an existing token system to a requested presentation
 
 ## Token Architecture
 
@@ -107,12 +107,11 @@ node scripts/validate-tokens.cjs --dir src/
 **With brand:** Extract primitives from brand colors/typography
 **With ui-styling:** Component tokens → Tailwind config
 
-**Skill Dependencies:** brand, ui-styling
-**Primary Agents:** ui-ux-designer, frontend-developer
+Use available brand guidance or ui-styling resources when relevant. These are optional integrations, not required installed skills or agent roles.
 
 ## Slide System
 
-Brand-compliant presentations using design tokens + Chart.js + contextual decision system.
+Optional HTML slide workflow using the bundled token and layout resources. Preserve a requested native PPTX or Google Slides format and use its appropriate available authoring tool. Existing brand and task requirements determine the narrative; persuasive copy is only appropriate for a persuasive task.
 
 ### Source of Truth
 
@@ -181,13 +180,13 @@ System calculates pattern breaks at 1/3 and 2/3 positions.
 
 ### Slide Requirements
 
-**ALL slides MUST:**
-1. Import `assets/design-tokens.css` - single source of truth
-2. Use CSS variables: `var(--color-primary)`, `var(--slide-bg)`, etc.
-3. Use Chart.js for charts (NOT CSS-only bars)
-4. Include navigation (keyboard arrows, click, progress bar)
-5. Center align content
-6. Focus on persuasion/conversion
+For the bundled HTML token workflow:
+1. Import the selected token CSS and reuse its variables for shared styles.
+2. Choose static SVG/CSS or a chart library based on the data and interaction needs.
+3. Include accessible navigation when the output behaves as a slide deck.
+4. Align content according to readability and the chosen layout.
+5. Match the task: teaching, reporting, comparison, or persuasion.
+6. Run the bundled token validator only when using its expected HTML/token conventions; use format-appropriate checks for native decks.
 
 ### Chart.js Integration
 
@@ -241,9 +240,9 @@ assets/designs/slides/claudekit-pitch-251223.html
 
 ## Best Practices
 
-1. Never use raw hex in components - always reference tokens
+1. Prefer existing shared tokens; introduce a new token when reuse or theming warrants it
 2. Semantic layer enables theme switching (light/dark)
 3. Component tokens enable per-component customization
 4. Use HSL format for opacity control
 5. Document every token's purpose
-6. **Slides must import design-tokens.css and use var() exclusively**
+6. Apply HTML token conventions only to the selected HTML workflow; preserve native formats and existing project conventions

@@ -2,11 +2,11 @@
 
 Inventory date: 2026-09-05. This catalog covers user-installed or customized skills and excludes Codex built-ins and skills bundled with official plugins.
 
-**50 unique names, 44 packages, and 62 local entrypoint files.** The session advertised 47 names. `banner-design`, `brand`, and `design` were present on disk but absent from that session's advertised list; the reason was not investigated.
+**50 unique names and 44 packages.** The original export found 62 local entrypoint files; the [Astra 6 maintenance](astra6-maintenance.md) retained 50 definitions and quarantined 12 duplicates. The original export session advertised 47 names. `banner-design`, `brand`, and `design` were present on disk but absent from that session's advertised list; the reason was not investigated.
 
-Sources: `~/.codex/skills` and `~/.agents/skills`. Duplicate names are consolidated, with complete packages taking precedence. The application-bundled `cua-driver` symlink is materialized as ordinary files. Six nested skills remain inside their `video-use` and `xiaohongshu-skills` parent packages.
+Sources: `~/.codex/skills` and `~/.agents/skills`. Duplicate names are consolidated, with complete packages taking precedence. The exported `cua-driver` is an ordinary package; maintenance also replaced the local discovery symlink with a managed copy without editing the signed application. Six nested skills remain inside their `video-use` and `xiaohongshu-skills` parent packages.
 
-The export contains 742 skill and backup files, approximately 25.9 MB, including supporting scripts, templates, references, fonts, and existing example images. See [manifest.json](manifest.json) for exact paths, source aliases, executable permissions, and SHA-256 hashes.
+The maintained export covers 743 skill and legacy files, including supporting scripts, templates, references, fonts, and existing example images. See [manifest.json](manifest.json) for exact paths, source aliases, executable permissions, and SHA-256 hashes. Six older repository ZIP archives remain outside the export manifest and were not regenerated; install the maintained package directories for these revisions.
 
 ## Finance and daily workflows (6)
 
@@ -27,7 +27,7 @@ The export contains 742 skill and backup files, approximately 25.9 MB, including
 | [ios-hybrid-delivery](../../skills/ios-hybrid-delivery/SKILL.md) | iOS signing, Xcode Cloud, and TestFlight delivery | Advertised |
 | [macos-disk-cleanup](../../skills/macos-disk-cleanup/SKILL.md) | Scan macOS disk usage and perform controlled cleanup | Advertised |
 | [stateful-change-delivery](../../skills/stateful-change-delivery/SKILL.md) | Deliver changes involving persistent state, data, and environments | Advertised |
-| [vanity-engineering-review](../../skills/vanity-engineering-review/SKILL.md) | Review overengineering and work with limited practical value | Advertised |
+| [vanity-engineering-review](../../skills/vanity-engineering-review/SKILL.md) | Assess complexity costs, benefits, and simplification tradeoffs | Advertised |
 | [deploy-to-vercel](../../skills/deploy-to-vercel/SKILL.md) | Deploy applications to Vercel | Advertised |
 | [vercel-cli-with-tokens](../../skills/vercel-cli-with-tokens/SKILL.md) | Use the Vercel CLI with token authentication | Advertised |
 | [vercel-optimize](../../skills/vercel-optimize/SKILL.md) | Optimize Vercel cost and performance | Advertised |
@@ -39,12 +39,12 @@ The export contains 742 skill and backup files, approximately 25.9 MB, including
 | [banner-design](../../skills/banner-design/SKILL.md) | Design banners for multiple platforms | Installed on disk only |
 | [brand](../../skills/brand/SKILL.md) | Manage brand voice, visual guidelines, and assets | Installed on disk only |
 | [design](../../skills/design/SKILL.md) | Create visual designs, logos, icons, and brand materials | Installed on disk only |
-| [design-audit](../../skills/design-audit/SKILL.md) | Review UI/UX and produce improvement plans | Advertised |
-| [design-system](../../skills/design-system/SKILL.md) | Design tokens, component specifications, and slides | Advertised |
+| [design-audit](../../skills/design-audit/SKILL.md) | Audit or implement UI improvements within the requested scope | Advertised |
+| [design-system](../../skills/design-system/SKILL.md) | Maintain design tokens and reusable component specifications | Advertised |
 | [ui-styling](../../skills/ui-styling/SKILL.md) | Style interfaces, components, and canvas designs | Advertised |
 | [ui-typography](../../skills/ui-typography/SKILL.md) | Apply interface typography guidelines | Advertised |
 | [relationship-design](../../skills/relationship-design/SKILL.md) | Design AI interfaces with memory and ongoing collaboration | Advertised |
-| [renaissance-architecture](../../skills/renaissance-architecture/SKILL.md) | Apply software architecture and product design principles | Advertised |
+| [renaissance-architecture](../../skills/renaissance-architecture/SKILL.md) | Explore first-principles product ideas and architecture alternatives | Advertised |
 | [web-design-guidelines](../../skills/web-design-guidelines/SKILL.md) | Review web usability and accessibility | Advertised |
 | [vercel-composition-patterns](../../skills/composition-patterns/SKILL.md) | Apply React component composition patterns | Advertised |
 | [vercel-react-best-practices](../../skills/react-best-practices/SKILL.md) | Apply React and Next.js performance practices | Advertised |
@@ -60,7 +60,7 @@ The export contains 742 skill and backup files, approximately 25.9 MB, including
 | [obsidian-bases](../../skills/obsidian-bases/SKILL.md) | Create Obsidian Bases data views | Advertised |
 | [obsidian-cli](../../skills/obsidian-cli/SKILL.md) | Manage Obsidian notes and application operations | Advertised |
 | [obsidian-markdown](../../skills/obsidian-markdown/SKILL.md) | Write Obsidian-flavored Markdown | Advertised |
-| [paper-distiller](../../skills/paper-distiller/SKILL.md) | Explain and distill research papers with HTML visualizations | Advertised |
+| [paper-distiller](../../skills/paper-distiller/SKILL.md) | Explain research papers at the requested depth and format | Advertised |
 | [json-canvas](../../skills/json-canvas/SKILL.md) | Create JSON Canvas boards and relationship diagrams | Advertised |
 
 ## Media and visualization (5)
@@ -89,7 +89,7 @@ The export contains 742 skill and backup files, approximately 25.9 MB, including
 | Skill | Purpose | Observed session status |
 |---|---|---|
 | [insurgent-campaign](../../skills/insurgent-campaign/SKILL.md) | Plan marketing and communications with limited resources | Advertised |
-| [negentropy-lens](../../skills/negentropy-lens/SKILL.md) | Evaluate decisions through system decay and growth | Advertised |
+| [negentropy-lens](../../skills/negentropy-lens/SKILL.md) | Apply an optional entropy and tacit-knowledge framework | Advertised |
 | [stop-slop](../../skills/stop-slop/SKILL.md) | Remove formulaic AI language from prose | Advertised |
 | [writing-guidelines](../../skills/writing-guidelines/SKILL.md) | Review documentation style and clarity | Advertised |
 
@@ -99,7 +99,7 @@ The export contains 742 skill and backup files, approximately 25.9 MB, including
 - The Paze route destination is replaced with `HOME_ADDRESS`. iOS organization, Apple Team, Bundle ID, and iCloud identifiers are also placeholders. Resolve these values from private configuration before running the workflows.
 - Twelve duplicate installation entrypoints are consolidated. The older Xiaohongshu entrypoint is preserved as [legacy/xiaohongshu-skills.agents.md](legacy/xiaohongshu-skills.agents.md); its filename prevents discovery as another `SKILL.md`.
 - Git metadata, virtual environments, caches, Python bytecode, session writer leases, and real `.env` files are excluded. The empty `.env.example` and required source files such as `cookies.py` are retained.
-- Local installed skills were not modified. Existing repository executable permissions are preserved. Original package licenses and font notices remain with their files and apply individually.
+- The initial export left local skills unchanged. The subsequent [maintenance](astra6-maintenance.md) applied revised instructions locally and quarantined duplicate entrypoints with a private rollback record. Existing repository executable permissions are preserved. Original package licenses and font notices remain with their files and apply individually.
 - The installed `vercel-optimize/lib/vercel.mjs` includes Windows CLI entry resolution absent from the previous repository version. This export includes that difference.
 
 ## Installation and restoration
@@ -110,7 +110,7 @@ Clone the branch containing this export, or the default branch after the PR is m
 npx skills add darrenfu/agent-skills --skill distill-video
 ```
 
-For a manual restore, use each manifest entry's `path` to locate the package and `source_paths` to determine its original installation location. Back up any existing destination before copying the complete package. For example:
+For a manual installation, use each manifest entry's `path` to locate the package and `canonical_installed_path` for its current destination. `source_paths` records historical provenance; do not recreate every duplicate. Public placeholders do not restore private configuration. Back up any existing destination before copying the complete package. For example:
 
 ```bash
 mkdir -p "$HOME/.codex/skills"
@@ -136,18 +136,8 @@ print(f"Verified {len(manifest['files'])} exported files")
 PY
 ```
 
-## Existing format compatibility notes
+## Format compatibility and verification
 
-All 50 definitions have parseable YAML with complete names and descriptions. The system's strict `quick_validate.py` reports the following seven existing metadata warnings. Their metadata is retained to preserve the installed content. All seven appeared in the session's advertised list, so these warnings are not evidence of an observed loading failure.
+All 50 definitions now pass the installed system's strict `quick_validate.py`. The original seven warnings are recorded under `original_source_format_warnings` in the manifest; version and argument metadata were normalized, and the React view-transition description no longer contains angle brackets. These warnings never established an observed loading failure.
 
-| Skill | Strict validation warning |
-|---|---|
-| `manim-video` | Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name |
-| `vercel-react-view-transitions` | Description cannot contain angle brackets (< or >) |
-| `visualize` | Unexpected key(s) in SKILL.md frontmatter: argument-hint. Allowed properties are: allowed-tools, description, license, metadata, name |
-| `xhs-auth` | Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name |
-| `xhs-content-ops` | Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name |
-| `xhs-interact` | Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name |
-| `xhs-publish` | Unexpected key(s) in SKILL.md frontmatter: version. Allowed properties are: allowed-tools, description, license, metadata, name |
-
-Validation covers export integrity, structure, private configuration replacement, and affected scripts. It does not establish that every skill's login, purchase, deployment, device operation, or external service workflow has been tested.
+Verification covers definition structure, current file hashes, changed-document links, local deduplication, private-default preservation, and seven read-only behavior scenarios. It does not establish that every skill's login, purchase, deployment, device operation, or external service workflow has been tested. Runtime scripts were unchanged during this maintenance. See the [maintenance report](astra6-maintenance.md) for scope and limitations.
