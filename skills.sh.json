@@ -4,7 +4,7 @@
   "groupings": [
     {
       "title": "Finance and daily workflows",
-      "description": "财务与生活",
+      "description": "Credit cards, gift cards, investing, restaurants, and school calendars.",
       "skills": [
         "churn-fu",
         "costco-vgc-wallet",
@@ -16,7 +16,7 @@
     },
     {
       "title": "Development and operations",
-      "description": "开发、交付与运维",
+      "description": "Application automation, software delivery, system maintenance, and Vercel operations.",
       "skills": [
         "cua-driver",
         "ios-hybrid-delivery",
@@ -30,7 +30,7 @@
     },
     {
       "title": "Frontend and design",
-      "description": "前端与设计",
+      "description": "Branding, interface design, accessibility, and React engineering practices.",
       "skills": [
         "banner-design",
         "brand",
@@ -50,7 +50,7 @@
     },
     {
       "title": "Research and knowledge",
-      "description": "研究与知识管理",
+      "description": "Web and paper research, NotebookLM, Obsidian, and visual knowledge organization.",
       "skills": [
         "defuddle",
         "notebooklm-studio",
@@ -63,7 +63,7 @@
     },
     {
       "title": "Media and visualization",
-      "description": "视频与可视化",
+      "description": "Video extraction, editing, animation, and HTML visualization.",
       "skills": [
         "distill-video",
         "manim-video",
@@ -74,7 +74,7 @@
     },
     {
       "title": "Xiaohongshu",
-      "description": "小红书",
+      "description": "Authentication, discovery, interaction, publishing, and content operations.",
       "skills": [
         "xiaohongshu-skills",
         "xhs-auth",
@@ -86,7 +86,7 @@
     },
     {
       "title": "Strategy and writing",
-      "description": "思考、营销与写作",
+      "description": "Campaign planning, decision support, and prose review.",
       "skills": [
         "insurgent-campaign",
         "negentropy-lens",
